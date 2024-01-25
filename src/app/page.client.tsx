@@ -8,9 +8,7 @@ import {useForm} from "react-hook-form";
 import {FormSchema} from "@/lib/types";
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Form} from "@/components/ui/form";
 
 export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupacion[]}) {
   const form = useForm<z.infer<typeof FormSchema>>({
