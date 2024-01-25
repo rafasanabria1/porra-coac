@@ -24,25 +24,23 @@ export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupa
     },
   });
 
-  const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    console.log("submit");
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    const url = new URL("/api/copy-image", window.location.origin);
 
-    return data;
+    url.searchParams.append("username", data.username);
+    url.searchParams.append("comparsas", data.comparsas.toString());
+    url.searchParams.append("chirigotas", data.chirigotas.toString());
+    url.searchParams.append("coros", data.coros.toString());
+    url.searchParams.append("cuartetos", data.cuartetos.toString());
+    const image = await fetch(url.toString()).then((data) => data.blob());
+
+    await navigator.clipboard.write([new ClipboardItem({[image.type]: image})]);
   };
 
-  const comparsas = agrupaciones
-    .filter((agrupacion) => agrupacion.modalidad === "comparsa")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
-  const chirigotas = agrupaciones
-    .filter((agrupacion) => agrupacion.modalidad === "chirigota")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
-  const coros = agrupaciones
-    .filter((agrupacion) => agrupacion.modalidad === "coro")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
-  const cuartetos = agrupaciones
-    .filter((agrupacion) => agrupacion.modalidad === "cuarteto")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
+  const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
+  const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
+  const coros = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro");
+  const cuartetos = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto");
 
   return (
     <Form {...form}>
