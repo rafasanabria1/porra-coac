@@ -6,16 +6,16 @@ import AcordeonModalidad from "@/components/acordeon-modalidad-detalle";
 export default async function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupacion[]}) {
   const comparsas = agrupaciones
     .filter((agrupacion) => agrupacion.modalidad === "comparsa")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
+    .sort((a, b) => a.nombre.localeCompare(b.nombre));
   const chirigotas = agrupaciones
     .filter((agrupacion) => agrupacion.modalidad === "chirigota")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
+    .sort((a, b) => a.nombre.localeCompare(b.nombre));
   const coros = agrupaciones
     .filter((agrupacion) => agrupacion.modalidad === "coro")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
+    .sort((a, b) => a.nombre.localeCompare(b.nombre));
   const cuartetos = agrupaciones
     .filter((agrupacion) => agrupacion.modalidad === "cuarteto")
-    .toSorted((a, b) => a.nombre.localeCompare(b.nombre));
+    .sort((a, b) => a.nombre.localeCompare(b.nombre));
 
   return (
     <section>
