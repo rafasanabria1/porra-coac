@@ -90,22 +90,6 @@ export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupa
             </AccordionItem>
           </Accordion>
         </section>
-        <section className="mx-auto  w-full max-w-4xl ">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({field}) => (
-              <FormItem className="flex-1">
-                <FormLabel>Nombre de usuario a mostrar al compartir la porra</FormLabel>
-                <div className="flex flex-row items-center justify-center space-x-4">
-                  <Input placeholder="carnaval_cadiz" type="text" {...field} />
-                  <Button type="submit">Copiar imagen</Button>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </section>
       </form>
     </Form>
   );
