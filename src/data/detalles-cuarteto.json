@@ -1,0 +1,72 @@
+[
+  {
+    "id": "3e005ad9-7905-41c7-bb2b-36117ef1f821",
+    "nombre": "Punk y Circo, la lucha continúa",
+    "enlace": "https://www.codigocarnaval.com/coac-2024/punk-y-circo-la-lucha-continua/",
+    "modalidad": "cuarteto",
+    "letra": "Miguel Ángel Moreno Gómez",
+    "musica": "Miguel Ángel Moreno Gómez",
+    "direccion": "Ángel Francisco Gago Cubelo",
+    "localidad": "Cádiz",
+    "cabezaDeSerie": false,
+    "videoPreliminares": "https://www.youtube.com/watch?v=dvvpc2_hleU",
+    "anyo": 2024,
+    "orden": 29
+  },
+  {
+    "id": "75010401-b5c2-4039-97ca-2a71fa7a3f2b",
+    "nombre": "En mi caseta cabe todo el mundo",
+    "enlace": "https://www.codigocarnaval.com/coac-2024/en-mi-caseta-cabe-todo-el-mundo/",
+    "modalidad": "cuarteto",
+    "letra": "Iván Romero Castellón",
+    "musica": "Borja Romero Castellón e Iván Romero Castellón",
+    "direccion": "Pedro José Tamayo Salazar",
+    "localidad": "Cádiz",
+    "cabezaDeSerie": false,
+    "videoPreliminares": "",
+    "anyo": 2024,
+    "orden": 66
+  },
+  {
+    "id": "35a3ec21-66f2-43ef-9f2c-eae5efef8a13",
+    "nombre": "Los Cocos de Cadi",
+    "enlace": "https://www.codigocarnaval.com/coac-2024/los-cocos-de-cadi/",
+    "modalidad": "cuarteto",
+    "letra": "Francisco Javier Aguilera Ceballos y Ángel Piulestán Guillén",
+    "musica": "Ángel Piulestán Guillén y Francisco Javier Aguilera Ceballos",
+    "direccion": "Francisco Javier Aguilera Ceballos",
+    "localidad": "Cádiz",
+    "cabezaDeSerie": false,
+    "videoPreliminares": "https://www.youtube.com/watch?v=fbrNj6bijE4",
+    "anyo": 2024,
+    "orden": 80
+  },
+  {
+    "id": "1cf3292c-9713-4771-a72c-0d1b4ad0add5",
+    "nombre": "¡Que doló de muñeca!",
+    "enlace": "https://www.codigocarnaval.com/coac-2024/que-dolo-de-muneca/",
+    "modalidad": "cuarteto",
+    "letra": "Daniel Rosales Gatica y Francisco Manuel Pastrana Casado",
+    "musica": "Francisco Manuel Pastrana Casado y Daniel Rosales Gatica",
+    "direccion": "Ismael Rueda García",
+    "localidad": "Cádiz",
+    "cabezaDeSerie": false,
+    "videoPreliminares": "https://www.youtube.com/watch?v=3IxSaG1htxc",
+    "anyo": 2024,
+    "orden": 22
+  },
+  {
+    "id": "b18c7e6c-bab1-4634-924c-931ab9bece59",
+    "nombre": "He vuelto (El Barrio)",
+    "enlace": "https://www.codigocarnaval.com/coac-2024/he-vuelto-el-barrio/",
+    "modalidad": "cuarteto",
+    "letra": "Ramón López Rodríguez",
+    "musica": "Daniel Illesca Frontado",
+    "direccion": "Daniel Illesca Frontado",
+    "localidad": "Cádiz",
+    "cabezaDeSerie": false,
+    "videoPreliminares": "https://www.youtube.com/watch?v=TVu66DgEPPM",
+    "anyo": 2024,
+    "orden": 72
+  }
+]
