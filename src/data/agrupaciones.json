@@ -1,650 +1,1310 @@
 [
-  {
-    "id": "c73d2049-3c1e-4f12-ab2a-d6ad769fd30b",
-    "nombre": "La oveja negra",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-oveja-negra/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "7ff0f22c-b865-4e96-b725-5a3c6c32fe2a",
-    "nombre": "Los colgaos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-colgaos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "1d70b1e1-c1ea-41e8-9b77-7d0d4e2fcb4c",
-    "nombre": "Y seguimos cantando",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/y-seguimos-cantando/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "2786b1de-3749-4ca2-a2c7-dac32285442e",
-    "nombre": "El Joyero",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-joyero/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "ea8c4a64-84bf-4aee-88c2-10d70beee0e4",
-    "nombre": "La alegría de Cádiz",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-alegria-de-cadiz/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "229e000b-37ac-412b-b730-b353e428ac9f",
-    "nombre": "Los Sacrificaos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-sacrificaos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "8c72b8f0-2027-436e-8b78-e603789756c8",
-    "nombre": "La Resbalaera",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-resbalaera/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "b3f2ff99-c0a5-4384-87ce-603ca9487f7e",
-    "nombre": "Las Herederas",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/las-herederas/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "f282becc-8394-4929-a9e6-caf3d1067dd3",
-    "nombre": "Donde fuimos felices",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/donde-fuimos-felices/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "2da05e9a-d168-4edc-b31c-01b54f787c88",
-    "nombre": "Los despertadores",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-despertadores/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "e240e9a3-be65-4044-b8ed-d81ce608d232",
-    "nombre": "Cádiz puro",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/cadiz-puro/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "b33930c4-d787-4fde-8a62-3da4c7cdaafa",
-    "nombre": "La Chirigotera",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-chirigotera/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "e21287f3-f9fa-49f3-9543-93bcbfbad7f8",
-    "nombre": "El Paseíto",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-paseito/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "4552c03c-d496-4ed2-b268-56e8d86b7692",
-    "nombre": "Cadígenas",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/cadigenas/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "c0dc5850-7c54-47e9-82f9-b7ce3a0f353c",
-    "nombre": "Los Benditos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-benditos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "d1d9894a-f8f2-4408-ad9e-e60c471b560e",
-    "nombre": "El último gaditano",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-ultimo-gaditano/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "2bb110db-1025-4609-a85b-3d49cc2ef2e7",
-    "nombre": "La comparsa de Doña Cuaresma",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-comparsa-de-dona-cuaresma/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "f50338f2-c2c8-4959-8c6b-f9868125abb3",
-    "nombre": "Vuelve ya el 3×4",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/vuelve-ya-el-3x4/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "11fdc38a-801b-448d-969e-9dffb92e223d",
-    "nombre": "Los Ofendiditos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-ofendiditos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "f4c322c6-a95b-415f-9501-a751e7fb5d9a",
-    "nombre": "El aventurero",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-aventurero/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "5fb65c1c-3d14-4fc3-8834-4e15630fb58f",
-    "nombre": "El golpe",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-golpe/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "84a388fe-7d29-4abc-aca2-3d3d3d103504",
-    "nombre": "El cielito de los cómicos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-cielito-de-los-comicos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "456eeef3-14b6-4987-9aeb-6b43725506a8",
-    "nombre": "¡¡Se prohíbe el cante!!",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/se-prohibe-el-cante/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "9e5f3211-5109-487e-bf44-16158cc2aff1",
-    "nombre": "Los taquilleros",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-taquilleros/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "e63d7d97-ae89-4980-8033-0ac3e19263ac",
-    "nombre": "La última canción",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-ultima-cancion/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "66683125-d112-4686-852d-3c1156dab344",
-    "nombre": "Los gritos de Cádiz",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-gritos-de-cadiz/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "f2908a37-d09d-4fe4-972a-926b0707a51e",
-    "nombre": "El último imperio",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-ultimo-imperio/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "bf86b53b-1d8e-42b1-af47-9f062df29069",
-    "nombre": "Los lengüetas",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-lenguetas/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "b4bab6d4-be22-4964-b8ef-f36b4ec8883b",
-    "nombre": "Las mujeres de la vida",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/las-mujeres-de-la-vida/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "c0bb056d-5b04-4b7c-9642-893640ebe769",
-    "nombre": "La Huella",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-huella/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "00dcceaa-1a09-4b53-9932-9e0991c9d37c",
-    "nombre": "Los Fabricantes",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-fabricantes/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "d2c6997b-206c-4d51-8af8-58ff252e9115",
-    "nombre": "Pueblejito la Frontera",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/pueblejito-la-frontera/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "1c6ff985-3d41-4170-b4d6-49a577429081",
-    "nombre": "Los Despojaos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-despojaos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "dac8b7e3-fa80-4c1d-9b3e-25ee4a300a09",
-    "nombre": "Los poquito a poco",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-poquito-a-poco/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "10b7e5a7-323a-4b9f-ab76-ef78f730dca1",
-    "nombre": "Agüita tapá",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/aguita-tapa/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "036ca2a1-e24f-4749-882c-3a3299667215",
-    "nombre": "Los amuletos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-amuletos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "8c493fe2-d6fd-4ad7-b2b8-f201d5e507af",
-    "nombre": "La Consentida",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-consentida/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "2ac7a1f8-66c5-4a9f-902c-3dee750d9a2e",
-    "nombre": "¡Con lo bonito que era!",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/con-lo-bonito-que-era/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "97569205-464a-445c-88b5-c8ad5a00a049",
-    "nombre": "Que bonita es Cádiz",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/que-bonita-es-cadiz/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "e12ab062-730e-4fb5-9f16-51ff51c19b55",
-    "nombre": "Los Refugiados",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-refugiados/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "f4c8fc42-bcf7-499c-9984-ca48a4f57d22",
-    "nombre": "Los Retratistas",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-retratistas/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "dd74cf80-c92d-4033-a682-85623a8af0e0",
-    "nombre": "La fiesta",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-fiesta/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "b72880da-7d3f-47ac-9de2-c12523edb61b",
-    "nombre": "Momosapiens",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/momosapiens/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "39e20967-aed4-440a-a488-9268a0f1df5e",
-    "nombre": "Los Atrapaos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-atrapaos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "4f269366-c06f-4a6e-bdf9-dc125f221116",
-    "nombre": "La Muralla",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-muralla/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "3cab42d1-61ac-4a49-95a0-a86925624b96",
-    "nombre": "El apotecario",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-apotecario/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "ad54fb57-125b-448e-ad55-476985c7d745",
-    "nombre": "¡Welcome to Cádiz…picha!",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/welcome-to-cadiz-picha/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "41bc1c6f-0278-4146-8b42-21ccfd0e8e93",
-    "nombre": "La tinta obrera",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-tinta-obrera/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "2e9cca6e-f3c2-4220-a049-90237f47ce10",
-    "nombre": "Los Maestros",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-maestros/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "2ab42e7e-5748-46e2-8ed2-492e1b91c443",
-    "nombre": "Los Atlantes",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-atlantes/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "27de48d9-daa5-452d-b431-65043847f0de",
-    "nombre": "Los estrellaos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-estrellaos/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "5e350828-2e20-47ca-a321-c604383f879e",
-    "nombre": "El Hum",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-hum/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "ceb5312a-e5fa-4be7-b29d-e4884f93bcfe",
-    "nombre": "El barrio calavera",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-barrio-calavera/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "88dd07e4-9d81-4685-9c62-5f982d9866ca",
-    "nombre": "El paraíso de Momo",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-paraiso-de-momo/",
-    "modalidad": "comparsa"
-  },
-  {
-    "id": "6bf54f43-99a4-4473-b673-4232cf043971",
-    "nombre": "La callejera invisible",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-callejera-invisible/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "09ca1a25-d26e-41c4-a0ac-81eef22e8b17",
-    "nombre": "La chirigota clásica",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-chirigota-clasica/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "1cf65b31-2768-4596-b284-f72524eeb6c8",
-    "nombre": "El Grinch de Cai",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-grinch-de-cai/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "2e4cbb0c-628f-4995-b240-761b9fa273d1",
-    "nombre": "La última y nos vamos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-ultima-y-nos-vamos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "12f79e94-8f9f-4d3e-9297-639f6a472d77",
-    "nombre": "Los Chabolis",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-chabolis/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "83911b4e-98a2-4048-92f2-133f61bc6a19",
-    "nombre": "Carnaval, me cago en tus muertos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/carnaval-me-cago-en-tus-muertos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "ea509f81-6aac-4718-9f9e-5b4a75c83907",
-    "nombre": "No hay verano sin besos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/no-hay-verano-sin-besos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "1c434308-54fc-471d-92ac-7fa5861bd088",
-    "nombre": "Los que salieron perdiendo",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-que-salieron-perdiendo/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "1473bf61-e64e-43c5-8d8b-85cfc429fc32",
-    "nombre": "Los del Canal Sur",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-del-canal-sur/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "841786d7-a4fa-41c4-b8aa-97fa4fc1acb4",
-    "nombre": "No eres tú soy yo: Los egocéntricos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-egocentricos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "bc7c1dad-f521-4d04-9bbb-7fb0122fd8ce",
-    "nombre": "No le doy más vueltas que me caliento",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/no-le-doy-mas-vueltas-que-me-caliento/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "4cd0def7-435c-4fa1-bb91-146f3123ba32",
-    "nombre": "Los de la arritmia al 3×4",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-de-la-arritmia-al-3x4/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "f30d655e-392c-4b7d-89a4-1f5209e2d7bc",
-    "nombre": "Los super-ego",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-super-ego/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "070c8c39-1a34-4357-ba63-02a3b9a0c663",
-    "nombre": "El niño de Isabelita 2",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-nino-de-isabelita-2/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "a9f6a9f9-7f37-4e64-ac48-69fb46de07d5",
-    "nombre": "El malo más malote de las pelis de Harry Potter",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-malo-mas-malote-de-las-pelis-de-harry-potter/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "a8a99c7d-f283-4470-817f-0ecb11ab0825",
-    "nombre": "Te como tu cara",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/te-como-tu-cara/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "efeeb925-24f5-48f3-9a42-5fb9eea44238",
-    "nombre": "La historia interminable",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-historia-interminable/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "d8462ce6-8767-4b4c-be06-e0551eb880f9",
-    "nombre": "La alegría de mi casa",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-alegria-de-mi-casa/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "ca7a85f9-3b42-435a-820d-a66a9fecd390",
-    "nombre": "La alegría de Cádiz: Los Apocalípticos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-apocalipticos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "100f2713-1577-48b9-9dba-473614525f97",
-    "nombre": "Te he dicho 1.748.654 veces que no soy exagerao",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-exageraos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "72a1b68a-603c-47de-b400-674c21e3c4c4",
-    "nombre": "Anonymous Gaditano",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/anonymous-gaditano/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "0f3f081b-de0b-4e4e-b3a6-0d5dd0e325ae",
-    "nombre": "Sácamela de la boca",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/sacamela-de-la-boca/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "b270b27a-bb65-4d1b-9d43-6beb3dd05065",
-    "nombre": "Los plácidos domingos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-placidos-domingos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "eddbe4ac-d1d7-4315-a8d1-1c9ac16c355d",
-    "nombre": "Que no se pierda la carga",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/que-no-se-pierda-la-carga/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "32f156b3-e587-4101-a476-87ad11ef91d9",
-    "nombre": "El planeta de los litios",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-planeta-de-los-litios/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "1024a2cd-931e-485d-8d50-1a8587cddbf6",
-    "nombre": "Lo mío es peor",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/lo-mio-es-peor/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "1bdf08ba-297d-45b0-acfe-e224db86a80d",
-    "nombre": "Por fin lo despedimos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/por-fin-lo-despedimos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "6b372e96-5be0-4f73-ae9a-24b651c1ec27",
-    "nombre": "Los gallitanos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-gallitanos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "372f653d-c9b4-4427-8870-ddaad8d66bbc",
-    "nombre": "Ciego de tronos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/ciego-de-tronos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "cef81923-015a-4fec-8d3b-40e3207b3094",
-    "nombre": "Los PiHorror",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-pihorror/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "3e581c86-5646-4f02-80d7-5e751a4d3528",
-    "nombre": "Los Excalvos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-excalvos/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "0350a15d-6314-4b4d-a1f2-1b8fe3ac5ef7",
-    "nombre": "Cariño necesito mi espacio",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/carino-necesito-mi-espacio/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "172c18f5-af0b-46c1-8016-c26c898af76f",
-    "nombre": "Tú hazme caso a mi",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/tu-hazme-caso-a-mi/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "088b6fd7-2502-4f7d-881d-2dc67a33ba44",
-    "nombre": "Me tienes frito",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/me-tienes-frito/",
-    "modalidad": "chirigota"
-  },
-  {
-    "id": "bc50fe34-1510-454e-83bf-e299994471b3",
-    "nombre": "Los Luciérnagas",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-luciernagas/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "ff06a02b-6867-44e3-966b-64f147ebcaf3",
-    "nombre": "Los Iluminados",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-iluminados/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "858d9d77-babe-4493-a4df-20fde877ae5a",
-    "nombre": "El Paraíso",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-paraiso/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "23a40194-d2a1-4528-9a03-200023a262a2",
-    "nombre": "La fiesta de los loco",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-fiesta-de-los-locos/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "9e8400d5-93f0-4383-99b4-00764551bf5f",
-    "nombre": "El gremio",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-gremio/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "e9324164-5e5a-4366-8854-8e5bb81650f3",
-    "nombre": "Asesinato en el Cádiz Express",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/asesinato-en-el-cadiz-express/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "c3f8774e-d672-465f-833e-69670a5c8c3e",
-    "nombre": "Este coro es de locos",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/este-coro-es-de-locos/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "997b4d7b-598c-43de-802c-21c1207a29da",
-    "nombre": "Los Vitamina",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-vitamina/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "b8508c2f-ad1e-4b8f-b7a7-3b885e9c3ffd",
-    "nombre": "El Baúl de la Piquer",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/el-baul-de-la-piquer/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "800ea010-51da-4a3a-bf4c-81d023839b16",
-    "nombre": "La Piñata",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-pinata/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "df8611bc-c532-407e-8a5a-1944552285ed",
-    "nombre": "La dama de Cádiz",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-dama-de-cadiz/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "e2562af6-39c8-401e-a88e-d894542c686f",
-    "nombre": "La coctelera",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-coctelera/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "eb5d9bea-82df-4394-a08d-f6525bc6af03",
-    "nombre": "Despierta!",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/despierta/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "2766a5bb-bed6-45cd-96cf-43b9a73680df",
-    "nombre": "Qué orgullo de coro",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/que-orgullo-de-coro/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "61abdb6a-363f-4b28-9f73-a8f37dd6a536",
-    "nombre": "La rendición de los bribones",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/la-rendicion-de-los-bribones/",
-    "modalidad": "coro"
-  },
-  {
-    "id": "3e005ad9-7905-41c7-bb2b-36117ef1f821",
-    "nombre": "Punk y Circo, la lucha continúa",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/punk-y-circo-la-lucha-continua/",
-    "modalidad": "cuarteto"
-  },
-  {
-    "id": "75010401-b5c2-4039-97ca-2a71fa7a3f2b",
-    "nombre": "En mi caseta cabe todo el mundo",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/en-mi-caseta-cabe-todo-el-mundo/",
-    "modalidad": "cuarteto"
-  },
-  {
-    "id": "35a3ec21-66f2-43ef-9f2c-eae5efef8a13",
-    "nombre": "Los Cocos de Cadi",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/los-cocos-de-cadi/",
-    "modalidad": "cuarteto"
-  },
-  {
-    "id": "1cf3292c-9713-4771-a72c-0d1b4ad0add5",
-    "nombre": "¡Que doló de muñeca!",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/que-dolo-de-muneca/",
-    "modalidad": "cuarteto"
-  },
-  {
-    "id": "b18c7e6c-bab1-4634-924c-931ab9bece59",
-    "nombre": "He vuelto (El Barrio)",
-    "enlace": "https://www.codigocarnaval.com/coac-2024/he-vuelto-el-barrio/",
-    "modalidad": "cuarteto"
-  }
+    {
+      "id": "c73d2049-3c1e-4f12-ab2a-d6ad769fd30b",
+      "nombre": "La oveja negra",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Antonio Martínez Ares",
+      "musica": "Antonio Martínez Ares",
+      "direccion": "Antonio Martínez Ares",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-oveja-negra/"
+    },
+    {
+      "id": "7ff0f22c-b865-4e96-b725-5a3c6c32fe2a",
+      "nombre": "Los colgaos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Raúl Cabrera Fernández",
+      "direccion": "Francisco Javier Bohórquez Gutiérrez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-colgaos/"
+    },
+    {
+      "id": "1d70b1e1-c1ea-41e8-9b77-7d0d4e2fcb4c",
+      "nombre": "Y seguimos cantando",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Antonio Jesús Pérez Fuentes y Sergio Guillén Bancalero",
+      "musica": "Sergio Guillén Bancalero",
+      "direccion": "Juan Antonio Macías Álvarez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/y-seguimos-cantando/"
+    },
+    {
+      "id": "2786b1de-3749-4ca2-a2c7-dac32285442e",
+      "nombre": "El Joyero",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "David Márquez Mateos",
+      "musica": "David Márquez Mateos",
+      "direccion": "Rafael Velázquez Jones",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-joyero/"
+    },
+    {
+      "id": "ea8c4a64-84bf-4aee-88c2-10d70beee0e4",
+      "nombre": "La alegría de Cádiz",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Manuel Lorenzo Cornejo Puente",
+      "musica": "Manuel Lorenzo Cornejo Puente",
+      "direccion": "Manuel Lorenzo Cornejo Puente",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-alegria-de-cadiz/"
+    },
+    {
+      "id": "229e000b-37ac-412b-b730-b353e428ac9f",
+      "nombre": "Los Sacrificaos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Jonathan Pérez Ginel",
+      "musica": "Jonathan Pérez Ginel",
+      "direccion": "Alberto Domínguez Gómez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-sacrificaos/"
+    },
+    {
+      "id": "8c72b8f0-2027-436e-8b78-e603789756c8",
+      "nombre": "La Resbalaera, una comparsa de toda la vida",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "José Antonio Cheza Martínez",
+      "direccion": "José Antonio Cheza Martínez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-resbalaera/"
+    },
+    {
+      "id": "b3f2ff99-c0a5-4384-87ce-603ca9487f7e",
+      "nombre": "Las Herederas",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Manuel Santander Grosso y Manuel Lorenzo Cornejo Puente",
+      "musica": "Manuel Santander Grosso y Juan Pablo Gallardo Lago",
+      "direccion": "Palmira Santander Grosso",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/las-herederas/"
+    },
+    {
+      "id": "f282becc-8394-4929-a9e6-caf3d1067dd3",
+      "nombre": "Donde fuimos felices",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Germán García Rendón",
+      "musica": "Germán García Rendón",
+      "direccion": "Alejandro Rodríguez Ferreras",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/donde-fuimos-felices/"
+    },
+    {
+      "id": "2da05e9a-d168-4edc-b31c-01b54f787c88",
+      "nombre": "Los despertadores",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Javier González Vázquez",
+      "musica": "Javier González Vázquez",
+      "direccion": "",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-despertadores/"
+    },
+    {
+      "id": "e240e9a3-be65-4044-b8ed-d81ce608d232",
+      "nombre": "Cádiz puro",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Roberto Fabio Gómez Durán y José Juan Pastrana Fernández",
+      "musica": "",
+      "direccion": "Aroa Gómez Ripoll",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/cadiz-puro/"
+    },
+    {
+      "id": "b33930c4-d787-4fde-8a62-3da4c7cdaafa",
+      "nombre": "La Chirigotera",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "María Rosario Suárez Varo y Antonio Pedro Serrano Álvarez",
+      "musica": "José María Barranco Cabrera",
+      "direccion": "Tamara Beardo González",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-chirigotera/"
+    },
+    {
+      "id": "e21287f3-f9fa-49f3-9543-93bcbfbad7f8",
+      "nombre": "El Paseíto",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Francisco Javier Díaz Quintana",
+      "musica": "Francisco Javier Díaz Quintana",
+      "direccion": "Juan José Perea Jiménez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-paseito/"
+    },
+    {
+      "id": "4552c03c-d496-4ed2-b268-56e8d86b7692",
+      "nombre": "Cadígenas",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Alba María Fernández Neva",
+      "musica": "Alba María Fernández Neva",
+      "direccion": "Alba María Fernández Neva",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/cadigenas/"
+    },
+    {
+      "id": "c0dc5850-7c54-47e9-82f9-b7ce3a0f353c",
+      "nombre": "Los Benditos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Francisco José Fernández Díaz",
+      "musica": "Francisco José Fernández Díaz",
+      "direccion": "Francisco Javier López Suárez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-benditos/"
+    },
+    {
+      "id": "d1d9894a-f8f2-4408-ad9e-e60c471b560e",
+      "nombre": "El último gaditano",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "",
+      "direccion": "Juan Carlos Cruz Cera",
+      "localidad": "Barcelona",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-ultimo-gaditano/"
+    },
+    {
+      "id": "2bb110db-1025-4609-a85b-3d49cc2ef2e7",
+      "nombre": "La comparsa de Doña Cuaresma",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Miguel Choza Camacho",
+      "musica": "José Miguel Choza Camacho",
+      "direccion": "Miguel Cortés Fernández",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-comparsa-de-dona-cuaresma/"
+    },
+    {
+      "id": "f50338f2-c2c8-4959-8c6b-f9868125abb3",
+      "nombre": "Vuelve ya el 3×4",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Rafael María Pastrana Lorenzo",
+      "musica": "Marcos Pastrana Lorenzo",
+      "direccion": "Javier Bonat Perales",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/vuelve-ya-el-3x4/"
+    },
+    {
+      "id": "11fdc38a-801b-448d-969e-9dffb92e223d",
+      "nombre": "Los Ofendiditos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Raúl Villanueva García",
+      "musica": "Carlos Javier Noriega Chamero",
+      "direccion": "La Agrupación",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-ofendiditos/"
+    },
+    {
+      "id": "f4c322c6-a95b-415f-9501-a751e7fb5d9a",
+      "nombre": "El aventurero",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Raúl Gutiérrez Denia y Juan Francisco Gutiérrez Denia",
+      "musica": "Raúl Gutiérrez Denia y Juan Francisco Gutiérrez Denia",
+      "direccion": "Raúl Gutiérrez Denia",
+      "localidad": "Jaén",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-aventurero/"
+    },
+    {
+      "id": "5fb65c1c-3d14-4fc3-8834-4e15630fb58f",
+      "nombre": "El golpe",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Jose Antonio Guarnido Ayllón y José María Victoria Rejón",
+      "musica": "Jose Antonio Guarnido Ayllón",
+      "direccion": "Jose Antonio Guarnido Ayllón",
+      "localidad": "Granada",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-golpe/"
+    },
+    {
+      "id": "84a388fe-7d29-4abc-aca2-3d3d3d103504",
+      "nombre": "El cielito de los cómicos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Rafael Castro Maíllo y Manuel Antonio Calderón Guillén",
+      "musica": "José María Durán Monroy y Manuel Antonio Calderón Guillén",
+      "direccion": "José María Durán Monroy",
+      "localidad": "Algeciras",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-cielito-de-los-comicos/"
+    },
+    {
+      "id": "456eeef3-14b6-4987-9aeb-6b43725506a8",
+      "nombre": "¡¡Se prohíbe el cante!!",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Ramón Jiménez Zamudio y José Manuel Utrera López",
+      "musica": "Ramón Jiménez Zamudio",
+      "direccion": "Ramón Jiménez Zamudio",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/se-prohibe-el-cante/"
+    },
+    {
+      "id": "9e5f3211-5109-487e-bf44-16158cc2aff1",
+      "nombre": "Los taquilleros",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Daniel Heredia Lorente y Juan Francisco Fernández Segura",
+      "musica": "Daniel Heredia Lorente",
+      "direccion": "Miguel Sánchez Garrido",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-taquilleros/"
+    },
+    {
+      "id": "e63d7d97-ae89-4980-8033-0ac3e19263ac",
+      "nombre": "La última canción",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "",
+      "direccion": "Antonio Roldán Gutiérrez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-ultima-cancion/"
+    },
+    {
+      "id": "66683125-d112-4686-852d-3c1156dab344",
+      "nombre": "Los gritos de Cádiz",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Francisco Javier Sevilla Pecci",
+      "musica": "Manuel Sánchez Alba",
+      "direccion": "José Luis Ariza Iglesias",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-gritos-de-cadiz/"
+    },
+    {
+      "id": "f2908a37-d09d-4fe4-972a-926b0707a51e",
+      "nombre": "El último imperio",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "José Antonio Cheza Martínez y Luis María Fernández Delgado",
+      "direccion": "Pablo García Pulido",
+      "localidad": "Granada",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-ultimo-imperio/"
+    },
+    {
+      "id": "bf86b53b-1d8e-42b1-af47-9f062df29069",
+      "nombre": "Los lengüetas",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Miguel Romero Martínez",
+      "musica": "Juan Antonio Sánchez Carrasco",
+      "direccion": "Alfredo Luque Beltrán",
+      "localidad": "Ceuta",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-lenguetas/"
+    },
+    {
+      "id": "b4bab6d4-be22-4964-b8ef-f36b4ec8883b",
+      "nombre": "Las mujeres de la vida",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Ramón Manuel Ruiz Lorenzo",
+      "musica": "Damián Gómez Reina",
+      "direccion": "María Fiamma Durán Morillo",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/las-mujeres-de-la-vida/"
+    },
+    {
+      "id": "c0bb056d-5b04-4b7c-9642-893640ebe769",
+      "nombre": "La Huella",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Carlos Luque León y Javier Casar García",
+      "musica": "Jesús Franco Guerrero y José Antonio Panés Oliva",
+      "direccion": "Juan Francisco Cádiz Vaca",
+      "localidad": "Tarifa",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-huella/"
+    },
+    {
+      "id": "00dcceaa-1a09-4b53-9932-9e0991c9d37c",
+      "nombre": "Los Fabricantes",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Tomás García Delgado",
+      "direccion": "Francisco Javier Trujillo Jiménez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-fabricantes/"
+    },
+    {
+      "id": "d2c6997b-206c-4d51-8af8-58ff252e9115",
+      "nombre": "Pueblejito la Frontera",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Juan Pastrana Fernández y Francisco Joaquín Fernández Cressi",
+      "musica": "José Juan Pastrana Fernández y Miguel Ángel Gómez González",
+      "direccion": "Francisco Joaquín Fernández Cressi",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/pueblejito-la-frontera/"
+    },
+    {
+      "id": "1c6ff985-3d41-4170-b4d6-49a577429081",
+      "nombre": "Los Despojaos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "David Campano Gómez",
+      "musica": "Daniel Montiel Fernández",
+      "direccion": "David Campano Gómez",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-despojaos/"
+    },
+    {
+      "id": "dac8b7e3-fa80-4c1d-9b3e-25ee4a300a09",
+      "nombre": "Los poquito a poco",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Luis Miguel Rossi Jiménez",
+      "musica": "Manuel Enrique García Rosado y Óscar Mosteiro Mesa",
+      "direccion": "José Manuel Sánchez Ariza",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-poquito-a-poco/"
+    },
+    {
+      "id": "10b7e5a7-323a-4b9f-ab76-ef78f730dca1",
+      "nombre": "Agüita tapá",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "David Ganaza Morro",
+      "direccion": "David Ganaza Morro",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/aguita-tapa/"
+    },
+    {
+      "id": "036ca2a1-e24f-4749-882c-3a3299667215",
+      "nombre": "Los amuletos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Andrés Morales Troncoso y Juan Pablo Gallardo Lago",
+      "direccion": "David Gómez Quirós",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-amuletos/"
+    },
+    {
+      "id": "8c493fe2-d6fd-4ad7-b2b8-f201d5e507af",
+      "nombre": "La Consentida",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Antonio Medina Ávila y Jaime Jesús Cruz Guillén",
+      "musica": "David Castro Fernández",
+      "direccion": "Clara Isabel Rojas Trejo",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-consentida/"
+    },
+    {
+      "id": "2ac7a1f8-66c5-4a9f-902c-3dee750d9a2e",
+      "nombre": "¡Con lo bonito que era!",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "David Domínguez Gutiérrez",
+      "musica": "David Domínguez Gutiérrez",
+      "direccion": "Miguel Antonio Novo Martínez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/con-lo-bonito-que-era/"
+    },
+    {
+      "id": "97569205-464a-445c-88b5-c8ad5a00a049",
+      "nombre": "Que bonita es Cádiz",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Luis Manuel Ripoll Lázaro",
+      "musica": "Luis Manuel Ripoll Lázaro y Juan Ramón Fernández Barberi",
+      "direccion": "Juan Ramón Fernández Barberi",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/que-bonita-es-cadiz/"
+    },
+    {
+      "id": "e12ab062-730e-4fb5-9f16-51ff51c19b55",
+      "nombre": "Los Refugiados",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Manuel Soto López",
+      "musica": "Alejandro Rodríguez Ferrera",
+      "direccion": "José Manuel Soto López",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-refugiados/"
+    },
+    {
+      "id": "f4c8fc42-bcf7-499c-9984-ca48a4f57d22",
+      "nombre": "Los Retratistas",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "David Ruiz Félix y Juan Pablo Gallardo Lago",
+      "direccion": "David Ruiz Félix",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-retratistas/"
+    },
+    {
+      "id": "dd74cf80-c92d-4033-a682-85623a8af0e0",
+      "nombre": "La fiesta",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Luis Manuel Rivero Ramos y Fernando Manuel Rodríguez Endrina",
+      "direccion": "Daniel Montiel Fernández",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-fiesta/"
+    },
+    {
+      "id": "b72880da-7d3f-47ac-9de2-c12523edb61b",
+      "nombre": "Momosapiens",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Rafael Velasco Blanco",
+      "musica": "Daniel López Romero",
+      "direccion": "Daniel López Romero",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/momosapiens/"
+    },
+    {
+      "id": "39e20967-aed4-440a-a488-9268a0f1df5e",
+      "nombre": "Los Atrapaos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Alberto Giraldo Bueno",
+      "musica": "Iván Giraldo Bueno",
+      "direccion": "Alberto Giraldo Bueno",
+      "localidad": "Huelva",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-atrapaos/"
+    },
+    {
+      "id": "4f269366-c06f-4a6e-bdf9-dc125f221116",
+      "nombre": "La Muralla",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Samuel Gallardo Alcalá y Sergio Bellido García",
+      "musica": "Samuel Gallardo Alcalá",
+      "direccion": "Samuel Gallardo Alcalá",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-muralla/"
+    },
+    {
+      "id": "3cab42d1-61ac-4a49-95a0-a86925624b96",
+      "nombre": "El apotecario",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Antonio Jiménez López",
+      "musica": "Antonio Manuel Malia Delgado",
+      "direccion": "Antonio Manuel Malia Delgado",
+      "localidad": "Algeciras",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-apotecario/"
+    },
+    {
+      "id": "ad54fb57-125b-448e-ad55-476985c7d745",
+      "nombre": "¡Welcome to Cádiz…picha!",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Gutiérrez Ponce",
+      "musica": "José Gutiérrez Ponce",
+      "direccion": "José Gutiérrez Ponce",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/welcome-to-cadiz-picha/"
+    },
+    {
+      "id": "41bc1c6f-0278-4146-8b42-21ccfd0e8e93",
+      "nombre": "La tinta obrera",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "José Antonio Conde Santos",
+      "musica": "Víctor Manuel Quintero Larrarte",
+      "direccion": "Víctor Manuel Quintero Larrarte",
+      "localidad": "Huelva",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-tinta-obrera/"
+    },
+    {
+      "id": "2e9cca6e-f3c2-4220-a049-90237f47ce10",
+      "nombre": "Los Maestros",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Marcos Antonio Nogueroles Hernández",
+      "musica": "Horacio Calvillo Melgar y Francisco José Torrejón Rivero",
+      "direccion": "Horacio Calvillo Melgar",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-maestros/"
+    },
+    {
+      "id": "2ab42e7e-5748-46e2-8ed2-492e1b91c443",
+      "nombre": "Los Atlantes",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Alfonso Galán Junquero y Miguel Ángel Cruz Bernal",
+      "musica": "Cristóbal Colón Rodríguez",
+      "direccion": "José Luis Pérez Pozo",
+      "localidad": "Chipiona",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-atlantes/"
+    },
+    {
+      "id": "27de48d9-daa5-452d-b431-65043847f0de",
+      "nombre": "Los estrellaos",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Francisco José Rodríguez Rodríguez",
+      "musica": "Francisco José Rodríguez Rodríguez",
+      "direccion": "Francisco José Rodríguez Rodríguez",
+      "localidad": "Granada",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-estrellaos/"
+    },
+    {
+      "id": "5e350828-2e20-47ca-a321-c604383f879e",
+      "nombre": "El Hum",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Víctor José Ramos Luque",
+      "musica": "Víctor José Ramos Luque",
+      "direccion": "Jorge Hidalgo Fernández",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-hum/"
+    },
+    {
+      "id": "ceb5312a-e5fa-4be7-b29d-e4884f93bcfe",
+      "nombre": "El barrio calavera",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "Alejandro Arteaga Ramírez",
+      "musica": "Rafael Fernández Delis y Francisco Javier Sierra Ramírez",
+      "direccion": "Francisco José Acosta Ramos",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-barrio-calavera/"
+    },
+    {
+      "id": "88dd07e4-9d81-4685-9c62-5f982d9866ca",
+      "nombre": "El paraíso de Momo",
+      "modalidad": "comparsa",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "",
+      "direccion": "La Agrupación",
+      "localidad": "Algeciras",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-paraiso-de-momo/"
+    },
+    {
+      "id": "6bf54f43-99a4-4473-b673-4232cf043971",
+      "nombre": "La callejera invisible",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "",
+      "direccion": "Antonia Molina Morales",
+      "localidad": "",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-callejera-invisible/"
+    },
+    {
+      "id": "09ca1a25-d26e-41c4-a0ac-81eef22e8b17",
+      "nombre": "La chirigota clásica",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "José Manuel Sánchez Reyes",
+      "musica": "Manuel Santander Grosso",
+      "direccion": "Juan Carlos Sánchez Requena",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-chirigota-clasica/"
+    },
+    {
+      "id": "1cf65b31-2768-4596-b284-f72524eeb6c8",
+      "nombre": "El Grinch de Cai",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Juan Manuel Braza Benítez",
+      "direccion": "José Sibón Pereira",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-grinch-de-cai/"
+    },
+    {
+      "id": "2e4cbb0c-628f-4995-b240-761b9fa273d1",
+      "nombre": "La última y nos vamos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Antonio Álvarez Cordero",
+      "musica": "Antonio Álvarez Cordero",
+      "direccion": "Ernesto Javier Urmeneta Montiel",
+      "localidad": "",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-ultima-y-nos-vamos/"
+    },
+    {
+      "id": "12f79e94-8f9f-4d3e-9297-639f6a472d77",
+      "nombre": "Los Chabolis",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Gonzalo Madrid Garrote y Manuel Benítez Molina",
+      "musica": "Manuel Benítez Molina",
+      "direccion": "Francisco Daniel Benítez Molina",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-chabolis/"
+    },
+    {
+      "id": "83911b4e-98a2-4048-92f2-133f61bc6a19",
+      "nombre": "Carnaval, me cago en tus muertos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Víctor Jurado Fernández",
+      "direccion": "Miguel Arlandi Salmerón",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/carnaval-me-cago-en-tus-muertos/"
+    },
+    {
+      "id": "ea509f81-6aac-4718-9f9e-5b4a75c83907",
+      "nombre": "No hay verano sin besos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Miguel Ángel Resuelo Mateos y Juan Luis Soto Velázquez",
+      "musica": "Maria Dolores García Campos y Vania Resuelo García",
+      "direccion": "Juan Luis Soto Velázquez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/no-hay-verano-sin-besos/"
+    },
+    {
+      "id": "1c434308-54fc-471d-92ac-7fa5861bd088",
+      "nombre": "Los que salieron perdiendo",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Carlos Pérez Pérez",
+      "musica": "Carlos Pérez Pérez",
+      "direccion": "Emilio López Vázquez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-que-salieron-perdiendo/"
+    },
+    {
+      "id": "1473bf61-e64e-43c5-8d8b-85cfc429fc32",
+      "nombre": "Los del Canal Sur",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Mario Rodríguez Parra",
+      "direccion": "Diego Letrán Toledo",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-del-canal-sur/"
+    },
+    {
+      "id": "841786d7-a4fa-41c4-b8aa-97fa4fc1acb4",
+      "nombre": "No eres tú soy yo: Los egocéntricos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "David Alvarado Ramírez",
+      "musica": "Jose Antonio Alvarado Ramírez",
+      "direccion": "Rubén Berea Ruiz",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-egocentricos/"
+    },
+    {
+      "id": "bc7c1dad-f521-4d04-9bbb-7fb0122fd8ce",
+      "nombre": "No le doy más vueltas que me caliento",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Agustín Carlos González Galiano",
+      "direccion": "Francisco Javier Fernández Cervantes",
+      "localidad": "Algeciras",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/no-le-doy-mas-vueltas-que-me-caliento/"
+    },
+    {
+      "id": "4cd0def7-435c-4fa1-bb91-146f3123ba32",
+      "nombre": "Los de la arritmia al 3×4",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "José Antonio Rodríguez Fierro y Moisés Serrano Bruzón",
+      "musica": "José Antonio Rodríguez Cruzado",
+      "direccion": "José Antonio Rodríguez Fierro",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-de-la-arritmia-al-3x4/"
+    },
+    {
+      "id": "f30d655e-392c-4b7d-89a4-1f5209e2d7bc",
+      "nombre": "Los super-ego",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Miguel Ángel Llull Segura",
+      "direccion": "Miguel Ángel Llull Segura",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-super-ego/"
+    },
+    {
+      "id": "070c8c39-1a34-4357-ba63-02a3b9a0c663",
+      "nombre": "El niño de Isabelita 2",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Iván Herrera Lobato y Antonio Rodríguez Medina",
+      "musica": "Antonio José Caballero Molina y José María Barranco Cabrera",
+      "direccion": "Antonio José Caballero Molina",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-nino-de-isabelita-2/"
+    },
+    {
+      "id": "a9f6a9f9-7f37-4e64-ac48-69fb46de07d5",
+      "nombre": "El malo más malote de las pelis de Harry Potter",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Juan Carlos Nevado Boza y José Luis Nieto Lindo",
+      "musica": "Sergio Gallardo Lago y José Luis Nieto Lindo",
+      "direccion": "Juan Carlos Nevado Boza",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-malo-mas-malote-de-las-pelis-de-harry-potter/"
+    },
+    {
+      "id": "a8a99c7d-f283-4470-817f-0ecb11ab0825",
+      "nombre": "Te como tu cara",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Juan Francisco Castro Fernández",
+      "musica": "David Castro Fernández",
+      "direccion": "Jorge Manuel Rodríguez González",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/te-como-tu-cara/"
+    },
+    {
+      "id": "efeeb925-24f5-48f3-9a42-5fb9eea44238",
+      "nombre": "La historia interminable",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Luis María Rodríguez Rondán",
+      "musica": "Luis María Rodríguez Rondán",
+      "direccion": "José María Pérez Campos",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-historia-interminable/"
+    },
+    {
+      "id": "d8462ce6-8767-4b4c-be06-e0551eb880f9",
+      "nombre": "La alegría de mi casa",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Raúl Calzado Pérez",
+      "musica": "",
+      "direccion": "Raúl Calzado Pérez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-alegria-de-mi-casa/"
+    },
+    {
+      "id": "ca7a85f9-3b42-435a-820d-a66a9fecd390",
+      "nombre": "La alegría de Cádiz: Los Apocalípticos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Luis Alfonso Martínez Viejo y Fernando Castro Segura",
+      "musica": "Jesús Romero Ariza",
+      "direccion": "Francisco Manuel Arroyo González",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-apocalipticos/"
+    },
+    {
+      "id": "100f2713-1577-48b9-9dba-473614525f97",
+      "nombre": "Te he dicho 1.748.654 veces que no soy exagerao",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Juan Miguel Villegas Jiménez y Juan Miguel Villegas Mejías",
+      "musica": "Alejandro Villegas Jiménez y Juan Miguel Villegas Mejías",
+      "direccion": "La agrupación",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-exageraos/"
+    },
+    {
+      "id": "72a1b68a-603c-47de-b400-674c21e3c4c4",
+      "nombre": "Anonymous Gaditano",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Anónimo",
+      "musica": "Anónimo",
+      "direccion": "Anónimo",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/anonymous-gaditano/"
+    },
+    {
+      "id": "0f3f081b-de0b-4e4e-b3a6-0d5dd0e325ae",
+      "nombre": "Sácamela de la boca",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Alejandro Pérez Sánchez",
+      "musica": "David Corrales González",
+      "direccion": "Antonio Jesús Álvarez Rosa",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/sacamela-de-la-boca/"
+    },
+    {
+      "id": "b270b27a-bb65-4d1b-9d43-6beb3dd05065",
+      "nombre": "Los plácidos domingos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "José Pereira Marrero y José Joaquín Martínez Aniceto",
+      "musica": "José Pereira Marrero y José Joaquín Martínez Aniceto",
+      "direccion": "La agrupación",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-placidos-domingos/"
+    },
+    {
+      "id": "eddbe4ac-d1d7-4315-a8d1-1c9ac16c355d",
+      "nombre": "Que no se pierda la carga",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Sergio Mora Campos",
+      "musica": "Sergio Mora Campos",
+      "direccion": "Sergio Mora Campos",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/que-no-se-pierda-la-carga/"
+    },
+    {
+      "id": "32f156b3-e587-4101-a476-87ad11ef91d9",
+      "nombre": "El planeta de los litios",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Juan Soto Quiles",
+      "musica": "Juan Soto Quiles",
+      "direccion": "Juan Soto Quiles",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-planeta-de-los-litios/"
+    },
+    {
+      "id": "1024a2cd-931e-485d-8d50-1a8587cddbf6",
+      "nombre": "Lo mío es peor",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Francisco Javier Ruiz Quintana Foncubierta y Carlos Javier García Sánchez",
+      "musica": "Diego Letrán Toledo y Marcos Antonio Nogueroles Hernández",
+      "direccion": "Eleazar Fernández Gandul",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/lo-mio-es-peor/"
+    },
+    {
+      "id": "1bdf08ba-297d-45b0-acfe-e224db86a80d",
+      "nombre": "Por fin lo despedimos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "José Ignacio Rodríguez Gilbau y Alfonso Chaves Sánchez",
+      "musica": "David Chaves Ramírez",
+      "direccion": "Juan Chaves Reina",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/por-fin-lo-despedimos/"
+    },
+    {
+      "id": "6b372e96-5be0-4f73-ae9a-24b651c1ec27",
+      "nombre": "Los gallitanos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "David Amaya Jiménez",
+      "direccion": "Francisco José Moreno Balboa",
+      "localidad": "Córdoba",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-gallitanos/"
+    },
+    {
+      "id": "372f653d-c9b4-4427-8870-ddaad8d66bbc",
+      "nombre": "Ciego de tronos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "La Agrupación",
+      "musica": "José María Barranco Cabrera",
+      "direccion": "José Antonio Gobea Soto",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/ciego-de-tronos/"
+    },
+    {
+      "id": "cef81923-015a-4fec-8d3b-40e3207b3094",
+      "nombre": "Los PiHorror",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Servando Aarón Sabajanes Gallardo y Servando Domingo Sabajanes Cortés",
+      "musica": "Servando Domingo Sabajanes Cortés",
+      "direccion": "Fernando Manuel Morales Romero",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-pihorror/"
+    },
+    {
+      "id": "3e581c86-5646-4f02-80d7-5e751a4d3528",
+      "nombre": "Los Excalvos",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Hugo Dorado Sousa",
+      "direccion": "Fernando Espinosa Sánchez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-excalvos/"
+    },
+    {
+      "id": "0350a15d-6314-4b4d-a1f2-1b8fe3ac5ef7",
+      "nombre": "Cariño necesito mi espacio",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "José Enrique Solano Salas",
+      "musica": "Sergio Caro Vizuete",
+      "direccion": "Fernando Santos Álvarez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/carino-necesito-mi-espacio/"
+    },
+    {
+      "id": "172c18f5-af0b-46c1-8016-c26c898af76f",
+      "nombre": "Tú hazme caso a mi",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Rafael Flores García",
+      "musica": "Sergio Toro González y Rafael Flores García",
+      "direccion": "Antonio Vega Cuevas",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/tu-hazme-caso-a-mi/"
+    },
+    {
+      "id": "088b6fd7-2502-4f7d-881d-2dc67a33ba44",
+      "nombre": "Me tienes frito",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "Eduardo Mayone Molina y Juan Antonio Osorio Guerrero",
+      "musica": "",
+      "direccion": "Norman Plaza Martínez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/me-tienes-frito/"
+    },
+    {
+      "id": "e60f9596-cfd8-48d1-8235-489ca02d201d",
+      "nombre": "Que ni las hambre las vamo a sentí",
+      "modalidad": "chirigota",
+      "anyo": 2024,
+      "letra": "José Luis García Cossío",
+      "musica": "José Luis García Cossío",
+      "direccion": "José Luis García Cossío",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/que-ni-las-hambre-las-vamo-a-senti/"
+    },
+    {
+      "id": "bc50fe34-1510-454e-83bf-e299994471b3",
+      "nombre": "Los Luciérnagas",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Julio Pardo Carillo",
+      "direccion": "Daniel Lucena Díez de la Torre",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-luciernagas/"
+    },
+    {
+      "id": "ff06a02b-6867-44e3-966b-64f147ebcaf3",
+      "nombre": "Los Iluminados",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "David Fernández Romero y Raúl Rodríguez Martínez",
+      "musica": "",
+      "direccion": "José Manuel Pedrosa Rodríguez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-iluminados/"
+    },
+    {
+      "id": "858d9d77-babe-4493-a4df-20fde877ae5a",
+      "nombre": "El Paraíso",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Luis Manuel Rivero Ramos y Juan Manuel Moreno Gandul",
+      "musica": "Luis Manuel Rivero Ramos y Juan Manuel Moreno Gandul",
+      "direccion": "Laura Rivero Ramos",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-paraiso/"
+    },
+    {
+      "id": "23a40194-d2a1-4528-9a03-200023a262a2",
+      "nombre": "La fiesta de los locos",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Antonio Bayón Gutiérrez",
+      "musica": "Rubén Cao Moreno",
+      "direccion": "María del Pilar Tejada Polanco",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-fiesta-de-los-locos/"
+    },
+    {
+      "id": "9e8400d5-93f0-4383-99b4-00764551bf5f",
+      "nombre": "El gremio",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "",
+      "direccion": "Francisco Jesús Doeste Armario",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-gremio/"
+    },
+    {
+      "id": "e9324164-5e5a-4366-8854-8e5bb81650f3",
+      "nombre": "Asesinato en el Cádiz Express",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Fernando Migueles Santander e Inés Migueles Pájaro",
+      "musica": "Fernando Migueles Santander e Inés Migueles Pájaro",
+      "direccion": "Fernando Migueles Santander",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/asesinato-en-el-cadiz-express/"
+    },
+    {
+      "id": "c3f8774e-d672-465f-833e-69670a5c8c3e",
+      "nombre": "Este coro es de locos",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "José Luis Bustelo Sánchez y Jesús Manuel Monje López",
+      "musica": "Jesús Manuel Monje López y José Luis Bustelo Sánchez",
+      "direccion": "Jesús Manuel Monje López",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/este-coro-es-de-locos/"
+    },
+    {
+      "id": "997b4d7b-598c-43de-802c-21c1207a29da",
+      "nombre": "Los Vitamina",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Victoriano Cano Pérez y Francisco Javier Sevilla Pecci",
+      "musica": "Luis Alfonso Betanzos Bernal y Francisco Javier Sevilla Pecci",
+      "direccion": "José Manuel Betanzos Bernal",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-vitamina/"
+    },
+    {
+      "id": "b8508c2f-ad1e-4b8f-b7a7-3b885e9c3ffd",
+      "nombre": "El Baúl de la Piquer",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "José Manuel Cardoso Romero y José Manuel Pérez Martínez",
+      "musica": "",
+      "direccion": "José Manuel Cardoso Romero",
+      "localidad": "",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/el-baul-de-la-piquer/"
+    },
+    {
+      "id": "800ea010-51da-4a3a-bf4c-81d023839b16",
+      "nombre": "La Piñata",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "José Antonio Montiel Lebrero y Manuel Sánchez Alba",
+      "direccion": "Juan Antonio Aragón Jiménez",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-pinata/"
+    },
+    {
+      "id": "df8611bc-c532-407e-8a5a-1944552285ed",
+      "nombre": "La dama de Cádiz",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "José Marchena Domínguez",
+      "musica": "Francisco Martínez Mora",
+      "direccion": "Francisco Martínez Mora",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-dama-de-cadiz/"
+    },
+    {
+      "id": "e2562af6-39c8-401e-a88e-d894542c686f",
+      "nombre": "La coctelera",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Antonio Segura Sánchez",
+      "musica": "Francisco Javier Díaz Quintana",
+      "direccion": "Laura Isabel Pastorín Aguilera",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-coctelera/"
+    },
+    {
+      "id": "eb5d9bea-82df-4394-a08d-f6525bc6af03",
+      "nombre": "Despierta!",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Sergio Molina Franco",
+      "musica": "Sergio Molina Franco y Jesús García Elías",
+      "direccion": "Rafael Martín Álvarez",
+      "localidad": "Sevilla",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/despierta/"
+    },
+    {
+      "id": "2766a5bb-bed6-45cd-96cf-43b9a73680df",
+      "nombre": "Qué orgullo de coro",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "",
+      "musica": "Juan Manuel Braza Benítez",
+      "direccion": "José Rodríguez Sánchez",
+      "localidad": "",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/que-orgullo-de-coro/"
+    },
+    {
+      "id": "61abdb6a-363f-4b28-9f73-a8f37dd6a536",
+      "nombre": "La rendición de los bribones",
+      "modalidad": "coro",
+      "anyo": 2024,
+      "letra": "Manuel Fernández Vázquez",
+      "musica": "Antonio Rodríguez Pino y Manuel Alvarado Valladolid",
+      "direccion": "La agrupación",
+      "localidad": "Huelva",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/la-rendicion-de-los-bribones/"
+    },
+    {
+      "id": "3e005ad9-7905-41c7-bb2b-36117ef1f821",
+      "nombre": "Punk y Circo, la lucha continúa",
+      "modalidad": "cuarteto",
+      "anyo": 2024,
+      "letra": "Miguel Ángel Moreno Gómez",
+      "musica": "Miguel Ángel Moreno Gómez",
+      "direccion": "Ángel Francisco Gago Cubelo",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": true,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/punk-y-circo-la-lucha-continua/"
+    },
+    {
+      "id": "75010401-b5c2-4039-97ca-2a71fa7a3f2b",
+      "nombre": "En mi caseta cabe todo el mundo",
+      "modalidad": "cuarteto",
+      "anyo": 2024,
+      "letra": "Iván Romero Castellón",
+      "musica": "Borja Romero Castellón e Iván Romero Castellón",
+      "direccion": "Pedro José Tamayo Salazar",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/en-mi-caseta-cabe-todo-el-mundo/"
+    },
+    {
+      "id": "35a3ec21-66f2-43ef-9f2c-eae5efef8a13",
+      "nombre": "Los Cocos de Cadi",
+      "modalidad": "cuarteto",
+      "anyo": 2024,
+      "letra": "Francisco Javier Aguilera Ceballos y Ángel Piulestán Guillén",
+      "musica": "Ángel Piulestán Guillén y Francisco Javier Aguilera Ceballos",
+      "direccion": "Francisco Javier Aguilera Ceballos",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/los-cocos-de-cadi/"
+    },
+    {
+      "id": "1cf3292c-9713-4771-a72c-0d1b4ad0add5",
+      "nombre": "¡Que doló de muñeca!",
+      "modalidad": "cuarteto",
+      "anyo": 2024,
+      "letra": "Daniel Rosales Gatica y Francisco Manuel Pastrana Casado",
+      "musica": "Francisco Manuel Pastrana Casado y Daniel Rosales Gatica",
+      "direccion": "Ismael Rueda García",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/que-dolo-de-muneca/"
+    },
+    {
+      "id": "b18c7e6c-bab1-4634-924c-931ab9bece59",
+      "nombre": "He vuelto (El Barrio)",
+      "modalidad": "cuarteto",
+      "anyo": 2024,
+      "letra": "Ramón López Rodríguez",
+      "musica": "Daniel Illesca Frontado",
+      "direccion": "Daniel Illesca Frontado",
+      "localidad": "Cádiz",
+      "cabezaDeSerie": false,
+      "enlaceCodigoCarnaval": "https://www.codigocarnaval.com/coac-2024/he-vuelto-el-barrio/"
+    }
 ]
