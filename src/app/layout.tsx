@@ -14,7 +14,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="es">
       <body className="dark container m-auto grid min-h-screen grid-rows-[auto,1fr,auto] bg-background px-4 font-sans antialiased">
         <header className="mx-auto flex w-full max-w-xl justify-between text-xl font-bold leading-[4rem]">
-          <Link href="/">PORRA COAC</Link>
+          <Link href="/">#PORRACOAC2024</Link>
           <Link href="/agrupaciones">Info agrupaciones</Link>
         </header>
         <main className="py-8">{children}</main>

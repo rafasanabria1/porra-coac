@@ -1,16 +1,11 @@
 import type {Agrupacion} from "./types";
 
-import comparsas from "@/data/detalles-comparsa.json";
-import chirigotas from "@/data/detalles-chirigota.json";
-import coros from "@/data/detalles-coro.json";
-import cuartetos from "@/data/detalles-cuarteto.json";
+import agrupaciones from "@/data/agrupaciones.json";
 
 export const api = {
   agrupaciones: {
     list: async (): Promise<Agrupacion[]> => {
-      const agrupaciones = [...comparsas, ...chirigotas, ...coros, ...cuartetos].sort(
-        (a, b) => a.orden - b.orden,
-      );
+      agrupaciones.sort((a, b) => a.orden - b.orden);
 
       return Promise.resolve(agrupaciones);
     },
