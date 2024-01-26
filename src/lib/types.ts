@@ -9,19 +9,15 @@ export interface Agrupacion {
   musica: string;
   direccion: string;
   localidad: string;
-  enlace: string;
   cabezaDeSerie: boolean;
-  videoPreliminares: string;
+  enlaceCodigoCarnaval: string;
 }
 
 export interface Actuacion {
-  id: string;
-  agrupacionId: string;
+  agrupacionID: string;
   fecha: Date;
-  fase: "preliminares" | "cuartos" | "semifinales" | "final";
   orden: number;
-  cabezaDeSerie: boolean;
-  video: string;
+  videoID: string;
 }
 
 export const FormSchema = z.object({
