@@ -15,7 +15,7 @@ export interface Agrupacion {
 
 export interface Actuacion {
   agrupacionID: string;
-  fecha: Date;
+  fecha: string;
   orden: number;
   videoID: string;
 }
