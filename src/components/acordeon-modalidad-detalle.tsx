@@ -18,7 +18,7 @@ export default async function AcordeonModalidad({
           return (
             <Card key={agrupacion.id}>
               <CardHeader>
-                <img alt={agrupacion.nombre} src="https://placehold.co/600x400" />
+                <img alt={agrupacion.nombre} src={`/agrupaciones-images/${agrupacion.id}.jpg`} />
                 <CardTitle>{agrupacion.nombre}</CardTitle>
                 {agrupacion.localidad ? (
                   <CardDescription>{agrupacion.localidad}</CardDescription>
