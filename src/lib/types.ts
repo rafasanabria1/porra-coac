@@ -1,24 +1,17 @@
+import type {Database} from "../../types/database";
+
 import * as z from "zod";
 
-export interface Agrupacion {
-  id: string;
-  modalidad: string;
-  anyo: number;
-  nombre: string;
-  letra: string;
-  musica: string;
-  direccion: string;
-  localidad: string;
-  cabezaDeSerie: boolean;
-  enlaceCodigoCarnaval: string;
-}
+export type Tables<T extends keyof Database["public"]["Tables"]> =
+  Database["public"]["Tables"][T]["Row"];
 
-export interface Actuacion {
-  agrupacionID: string;
-  fecha: string;
-  orden: number;
-  videoID: string;
-}
+export type TablesInsert<T extends keyof Database["public"]["Tables"]> =
+  Database["public"]["Tables"][T]["Insert"];
+
+export type TablesUpdate<T extends keyof Database["public"]["Tables"]> =
+  Database["public"]["Tables"][T]["Insert"];
+
+export type Enums<T extends keyof Database["public"]["Enums"]> = Database["public"]["Enums"][T];
 
 export const FormSchema = z.object({
   username: z.string().min(3, {
