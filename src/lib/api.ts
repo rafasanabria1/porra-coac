@@ -1,65 +1,69 @@
-import type {Agrupacion} from "./types";
+import type {Database} from "../../types/database";
+import type {Tables} from "./types";
+import type {QueryData} from "@supabase/supabase-js";
 
-import agrupaciones from "@/data/agrupaciones.json";
-import preliminares from "@/data/preliminares.json";
-import cuartos from "@/data/cuartos.json";
+import {createClient} from "@supabase/supabase-js";
+import {QueryResult, QueryError} from "@supabase/supabase-js";
+
+const supabase = createClient<Database>(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+);
 
 export const api = {
   agrupaciones: {
-    list: async (modalidad = ""): Promise<Agrupacion[]> => {
-      if (modalidad !== "") {
-        return Promise.resolve(
-          agrupaciones.filter((agrupacion) => agrupacion.modalidad === modalidad),
-        );
+    list: async (): Promise<Tables<"agrupaciones">[]> => {
+      const {data, error} = await supabase
+        .from("actuaciones")
+        .select("agrupaciones(*)")
+        .order("fecha", {ascending: true})
+        .order("orden", {ascending: true});
+
+      if (error) {
+        throw new Error(error.message);
       }
+      type CountriesWithCities = QueryData<typeof countriesWithCitiesQuery>;
 
-      return Promise.resolve(agrupaciones);
+      const agrupaciones: Tables<"agrupaciones">[] = data.agrupaciones;
+
+      return agrupaciones;
     },
-    listByName: async (modalidad = ""): Promise<Agrupacion[]> => {
-      const agrupaciones = await api.agrupaciones.list(modalidad);
+    listFilterByModalidad: async (modalidad = ""): Promise<Tables<"agrupaciones">[]> => {
+      const {data: agrupaciones, error} = await supabase
+        .from("agrupaciones")
+        .select("*")
+        .eq("modalidad", modalidad);
 
-      return agrupaciones.sort((a, b) => a.nombre.localeCompare(b.nombre));
-    },
-    get: async (id: string): Promise<Agrupacion | undefined> => {
-      const agrupaciones = await api.agrupaciones.list();
-
-      return agrupaciones.find((agrupacion) => agrupacion.id === id);
-    },
-    getPreliminares: async (modalidad = ""): Promise<Agrupacion[]> => {
-      const agrupacionesPromises = preliminares
-        .sort((a, b) => {
-          return a.fecha.localeCompare(b.fecha) || a.orden - b.orden;
-        })
-        .map((actuacion) => {
-          return api.agrupaciones.get(actuacion.agrupacionID);
-        });
-      const agrupaciones: (Agrupacion | undefined)[] = await Promise.all(agrupacionesPromises);
-
-      agrupaciones.filter((agrupacion) => agrupacion !== undefined);
-
-      if (modalidad !== "") {
-        return agrupaciones.filter((agrupacion) => agrupacion!.modalidad === modalidad);
+      if (error) {
+        throw new Error(error.message);
       }
 
       return agrupaciones;
     },
-    getCuartos: async (modalidad = ""): Promise<Agrupacion[]> => {
-      const agrupacionesPromises = cuartos
-        .sort((a, b) => {
-          return a.fecha.localeCompare(b.fecha) || a.orden - b.orden;
-        })
-        .map((actuacion) => {
-          return api.agrupaciones.get(actuacion.agrupacionID);
-        });
-      const agrupaciones: (Agrupacion | undefined)[] = await Promise.all(agrupacionesPromises);
+    listSortedByName: async (): Promise<Tables<"agrupaciones">[]> => {
+      const {data: agrupaciones, error} = await supabase
+        .from("agrupaciones")
+        .select("*")
+        .order("nombre", {ascending: true});
 
-      agrupaciones.filter((agrupacion) => agrupacion !== undefined);
-
-      if (modalidad !== "") {
-        return agrupaciones.filter((agrupacion) => agrupacion!.modalidad === modalidad);
+      if (error) {
+        throw new Error(error.message);
       }
 
       return agrupaciones;
+    },
+    get: async (id: string): Promise<Tables<"agrupaciones">> => {
+      const {data: agrupacion, error} = await supabase
+        .from("agrupaciones")
+        .select("*")
+        .eq("id", id)
+        .single();
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      return agrupacion;
     },
   },
 };
