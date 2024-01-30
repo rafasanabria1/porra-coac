@@ -3,8 +3,9 @@ import {ImageResponse} from "next/og";
 
 export const runtime = "edge";
 
-export async function GET(request: Request) {
-  const {searchParams} = new URL(request.url);
+export async function GET(/*request: Request*/) {
+  /*
+    const {searchParams} = new URL(request.url);
   const fase = searchParams.get("fase") ?? "";
   const username = searchParams.get("username") ?? "";
   const comparsas = searchParams.get("comparsas") ? searchParams.get("comparsas")?.split(",") : "";
@@ -13,7 +14,7 @@ export async function GET(request: Request) {
     : "";
   const coros = searchParams.get("coros") ? searchParams.get("coros")?.split(",") : "";
   const cuartetos = searchParams.get("cuartetos") ? searchParams.get("cuartetos")?.split(",") : "";
-
+    */
   try {
     return new ImageResponse(
       (
@@ -36,20 +37,14 @@ export async function GET(request: Request) {
               </h2>
               <div tw="mt-8 flex md:mt-0">
                 <div tw="flex rounded-md shadow">
-                  <a
-                    href="#"
-                    tw="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white"
-                  >
+                  <span tw="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white">
                     Get started
-                  </a>
+                  </span>
                 </div>
                 <div tw="ml-3 flex rounded-md shadow">
-                  <a
-                    href="#"
-                    tw="flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600"
-                  >
+                  <span tw="flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600">
                     Learn more
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
