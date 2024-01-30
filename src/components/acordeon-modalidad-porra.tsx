@@ -1,6 +1,5 @@
 import type {AgrupacionEntity} from "@types";
 import type {UseFormReturn} from "react-hook-form";
-import type * as z from "zod";
 
 import {Checkbox} from "@/components/ui/checkbox";
 import {AccordionContent, AccordionTrigger} from "@/components/ui/accordion";

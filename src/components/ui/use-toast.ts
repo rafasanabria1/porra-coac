@@ -48,6 +48,7 @@ type Action =
       toastId?: ToasterToast["id"];
     };
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 interface State {
   toasts: ToasterToast[];
 }
