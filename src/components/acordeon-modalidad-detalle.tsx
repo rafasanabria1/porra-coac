@@ -1,4 +1,6 @@
-import type {Agrupacion} from "@/lib/types";
+import type {AgrupacionEntity} from "@types";
+
+import Image from "next/image";
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {AccordionContent, AccordionTrigger} from "@/components/ui/accordion";
@@ -8,7 +10,7 @@ export default async function AcordeonModalidad({
   agrupaciones,
 }: {
   titulo: string;
-  agrupaciones: Agrupacion[];
+  agrupaciones: AgrupacionEntity[];
 }) {
   return (
     <>
@@ -18,7 +20,17 @@ export default async function AcordeonModalidad({
           return (
             <Card key={agrupacion.id}>
               <CardHeader>
-                <img alt={agrupacion.nombre} src={`/agrupaciones-images/${agrupacion.id}.jpg`} />
+                <Image
+                  alt={agrupacion.nombre}
+                  height={300}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1024px) 33vw, (max-width: 1536px) 25vw, 20vw"
+                  src={`/agrupaciones-images/${agrupacion.id}.jpg`}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  width={500}
+                />
                 <CardTitle>{agrupacion.nombre}</CardTitle>
                 {agrupacion.localidad ? (
                   <CardDescription>{agrupacion.localidad}</CardDescription>

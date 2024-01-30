@@ -5,6 +5,15 @@ const nextConfig = {
       fullUrl: true,
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/semifinales",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

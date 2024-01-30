@@ -1,9 +1,14 @@
-import type {Agrupacion} from "@/lib/types";
+import type {AgrupacionEntity} from "@types";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidad from "@/components/acordeon-modalidad-detalle";
+import HeadingH2 from "@/components/ui/headingh2";
 
-export default async function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupacion[]}) {
+export default async function AgrupacionesClient({
+  agrupaciones,
+}: {
+  agrupaciones: AgrupacionEntity[];
+}) {
   const comparsas = agrupaciones
     .filter((agrupacion) => agrupacion.modalidad === "comparsa")
     .sort((a, b) => a.nombre.localeCompare(b.nombre));
@@ -19,6 +24,7 @@ export default async function AgrupacionesClient({agrupaciones}: {agrupaciones: 
 
   return (
     <section>
+      <HeadingH2>Agrupaciones participantes</HeadingH2>
       <Accordion collapsible type="single">
         <AccordionItem value="comparsas">
           <AcordeonModalidad agrupaciones={comparsas} titulo="Comparsas" />

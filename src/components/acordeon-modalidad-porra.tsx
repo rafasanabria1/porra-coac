@@ -1,4 +1,4 @@
-import type {Agrupacion, FormSchema} from "@/lib/types";
+import type {AgrupacionEntity} from "@types";
 import type {UseFormReturn} from "react-hook-form";
 import type * as z from "zod";
 
@@ -9,18 +9,24 @@ import {FormControl, FormField, FormItem, FormLabel} from "./ui/form";
 
 export default function AcordeonModalidad({
   titulo,
+  form,
   formIndex,
   agrupaciones,
   totalSeleccionados,
   totalPosibles,
-  form,
 }: {
   titulo: string;
   formIndex: "comparsas" | "chirigotas" | "coros" | "cuartetos";
-  agrupaciones: Agrupacion[];
+  agrupaciones: AgrupacionEntity[];
   totalSeleccionados: number;
   totalPosibles: number;
-  form: UseFormReturn<z.infer<typeof FormSchema>>;
+  form: UseFormReturn<{
+    username: string;
+    comparsas: string[];
+    chirigotas: string[];
+    coros: string[];
+    cuartetos: string[];
+  }>;
 }) {
   return (
     <>

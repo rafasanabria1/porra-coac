@@ -77,6 +77,70 @@ export interface Database {
         };
         Relationships: [];
       };
+      cuartos: {
+        Row: {
+          agrupacion_id: string | null;
+          fecha: string;
+          id: number;
+          orden: number;
+          youtube_id: string | null;
+        };
+        Insert: {
+          agrupacion_id?: string | null;
+          fecha: string;
+          id?: number;
+          orden: number;
+          youtube_id?: string | null;
+        };
+        Update: {
+          agrupacion_id?: string | null;
+          fecha?: string;
+          id?: number;
+          orden?: number;
+          youtube_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "cuartos_agrupacion_id_fkey";
+            columns: ["agrupacion_id"];
+            isOneToOne: false;
+            referencedRelation: "agrupaciones";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      preliminares: {
+        Row: {
+          agrupacion_id: string | null;
+          fecha: string;
+          id: number;
+          orden: number;
+          youtube_id: string | null;
+        };
+        Insert: {
+          agrupacion_id?: string | null;
+          fecha: string;
+          id?: number;
+          orden: number;
+          youtube_id?: string | null;
+        };
+        Update: {
+          agrupacion_id?: string | null;
+          fecha?: string;
+          id?: number;
+          orden?: number;
+          youtube_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "preliminares_agrupacion_id_fkey";
+            columns: ["agrupacion_id"];
+            isOneToOne: false;
+            referencedRelation: "agrupaciones";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
     };
     Views: {
       [_ in never]: never;

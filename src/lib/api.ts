@@ -1,9 +1,7 @@
-import type {Database} from "../../types/database";
-import type {Tables} from "./types";
-import type {QueryData} from "@supabase/supabase-js";
+import type {Database} from "@database";
+import type {AgrupacionCuartosEntity, AgrupacionEntity, AgrupacionPreliminaresEntity} from "@types";
 
 import {createClient} from "@supabase/supabase-js";
-import {QueryResult, QueryError} from "@supabase/supabase-js";
 
 const supabase = createClient<Database>(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -12,27 +10,48 @@ const supabase = createClient<Database>(
 
 export const api = {
   agrupaciones: {
-    list: async (): Promise<Tables<"agrupaciones">[]> => {
-      const {data, error} = await supabase
-        .from("actuaciones")
-        .select("agrupaciones(*)")
-        .order("fecha", {ascending: true})
-        .order("orden", {ascending: true});
+    preliminaresByOrder: async () => {
+      const {data: agrupaciones, error} = await supabase
+        .from("preliminares")
+        .select("fecha, orden, ...agrupaciones(id, nombre, modalidad)")
+        .order("fecha", {
+          ascending: true,
+        })
+        .order("orden", {
+          ascending: true,
+        })
+        .returns<AgrupacionPreliminaresEntity[]>();
 
       if (error) {
         throw new Error(error.message);
       }
-      type CountriesWithCities = QueryData<typeof countriesWithCitiesQuery>;
-
-      const agrupaciones: Tables<"agrupaciones">[] = data.agrupaciones;
 
       return agrupaciones;
     },
-    listFilterByModalidad: async (modalidad = ""): Promise<Tables<"agrupaciones">[]> => {
+    cuartosByOrder: async () => {
+      const {data: agrupaciones, error} = await supabase
+        .from("cuartos")
+        .select("fecha, orden, ...agrupaciones(id, nombre, modalidad)")
+        .order("fecha", {
+          ascending: true,
+        })
+        .order("orden", {
+          ascending: true,
+        })
+        .returns<AgrupacionCuartosEntity[]>();
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      return agrupaciones;
+    },
+    listFilterByModalidad: async (modalidad: string) => {
       const {data: agrupaciones, error} = await supabase
         .from("agrupaciones")
         .select("*")
-        .eq("modalidad", modalidad);
+        .eq("modalidad", modalidad)
+        .returns<AgrupacionEntity[]>();
 
       if (error) {
         throw new Error(error.message);
@@ -40,11 +59,11 @@ export const api = {
 
       return agrupaciones;
     },
-    listSortedByName: async (): Promise<Tables<"agrupaciones">[]> => {
+    list: async () => {
       const {data: agrupaciones, error} = await supabase
         .from("agrupaciones")
         .select("*")
-        .order("nombre", {ascending: true});
+        .returns<AgrupacionEntity[]>();
 
       if (error) {
         throw new Error(error.message);
@@ -52,7 +71,7 @@ export const api = {
 
       return agrupaciones;
     },
-    get: async (id: string): Promise<Tables<"agrupaciones">> => {
+    get: async (id: string) => {
       const {data: agrupacion, error} = await supabase
         .from("agrupaciones")
         .select("*")
