@@ -19,7 +19,7 @@ export default function AgrupacionesClient({
 }: {
   agrupaciones: AgrupacionCuartosEntity[] | null;
 }) {
-  const toast = useToast();
+  const {toast} = useToast();
 
   const FormSchema = z.object({
     username: z.string().min(3, {
@@ -49,20 +49,26 @@ export default function AgrupacionesClient({
       cuartetos: [],
     },
   });
+  const {isSubmitting} = form.formState;
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    const url = new URL("/api/semifinales/copy-image", window.location.origin);
+    const url = new URL("/api/copy-image", window.location.origin);
 
+    url.searchParams.append("fase", "semifinales");
     url.searchParams.append("username", data.username);
     url.searchParams.append("comparsas", data.comparsas.toString());
     url.searchParams.append("chirigotas", data.chirigotas.toString());
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
+
     const image = await fetch(url.toString()).then((data) => data.blob());
 
     await navigator.clipboard.write([new ClipboardItem({[image.type]: image})]);
 
-    toast;
+    toast({
+      title: "Copiado al portapapeles!",
+      description: "Ahora puedes pegar tu imagen para compartirla donde quieras ;)",
+    });
   };
 
   if (!agrupaciones) {
@@ -77,12 +83,12 @@ export default function AgrupacionesClient({
   return (
     <article className="mx-auto max-w-2xl">
       <Form {...form}>
-        <header>
-          <HeadingH2>Pase a semifinales</HeadingH2>
-        </header>
-        <main>
-          {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
-          <form className="grid gap-16" onSubmit={form.handleSubmit(onSubmit)}>
+        {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <header>
+            <HeadingH2>Pase a semifinales</HeadingH2>
+          </header>
+          <main className="grid gap-16">
             <Accordion collapsible type="single">
               <AccordionItem value="comparsas">
                 <AcordeonModalidadPorra
@@ -125,27 +131,35 @@ export default function AgrupacionesClient({
                 />
               </AccordionItem>
             </Accordion>
-          </form>
-        </main>
-        <footer className="mt-8">
-          <HeadingH3>
-            Comparte tu <span className="text-gray-500">#PORRACOAC2024Semifinales</span>
-          </HeadingH3>
-          <FormField
-            control={form.control}
-            name="username"
-            render={({field}) => (
-              <FormItem className="pt-4">
-                <FormLabel>Nombre de usuario a mostrar al compartir</FormLabel>
-                <div className="flex flex-row items-center justify-center space-x-4">
-                  <Input placeholder="carnaval_cadiz" type="text" {...field} />
-                  <Button type="submit">Copiar imagen</Button>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </footer>
+          </main>
+          <footer className="mt-8">
+            <HeadingH3>
+              Comparte tu <span className="text-gray-500">#PORRACOAC2024Semifinales</span>
+            </HeadingH3>
+            <FormField
+              control={form.control}
+              name="username"
+              render={({field}) => (
+                <FormItem className="pt-4">
+                  <FormLabel htmlFor="username">Nombre de usuario a mostrar al compartir</FormLabel>
+                  <div className="flex flex-row items-center justify-center space-x-4">
+                    <Input
+                      placeholder="carnaval_cadiz"
+                      type="text"
+                      {...field}
+                      autoComplete="username"
+                      id="username"
+                    />
+                    <Button disabled={isSubmitting} type="submit">
+                      {`${isSubmitting ? "Copiando imagen..." : "Copiar imagen"}`}
+                    </Button>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </footer>
+        </form>
       </Form>
     </article>
   );
