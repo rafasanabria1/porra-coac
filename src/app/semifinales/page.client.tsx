@@ -61,14 +61,41 @@ export default function AgrupacionesClient({
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
 
-    const image = await fetch(url.toString()).then((data) => data.blob());
+    const image = await fetch(url.toString())
+      .then((data) => data.blob())
+      .catch(() => new Blob());
 
-    await navigator.clipboard.write([new ClipboardItem({[image.type]: image})]);
+    if (image.size === 0) {
+      toast({
+        title: "Error al generar la imagen",
+        description: "Inténtalo de nuevo más tarde.",
+        variant: "destructive",
+      });
 
-    toast({
-      title: "Copiado al portapapeles!",
-      description: "Ahora puedes pegar tu imagen para compartirla donde quieras ;)",
+      return;
+    }
+
+    const clipboardItem = new ClipboardItem({
+      "image/png": new Promise((resolve) => {
+        resolve(image);
+      }),
     });
+
+    navigator.clipboard
+      .write([clipboardItem])
+      .then(() => {
+        toast({
+          title: "Copiado al portapapeles!",
+          description: "Ahora puedes pegar tu imagen para compartirla donde quieras ;)",
+        });
+      })
+      .catch(() => {
+        toast({
+          title: "Error al copiar al portapapeles",
+          description: "Inténtalo de nuevo más tarde.",
+          variant: "destructive",
+        });
+      });
   };
 
   if (!agrupaciones) {
