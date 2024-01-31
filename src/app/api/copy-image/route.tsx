@@ -1,20 +1,24 @@
 /* eslint-disable react/no-unknown-property */
+import type {Database} from "@database";
+
 import {ImageResponse} from "next/og";
+
+import {GenerateImage} from "./generate-image";
 
 export const runtime = "edge";
 
-export async function GET(/*request: Request*/) {
-  /*
-    const {searchParams} = new URL(request.url);
-  const fase = searchParams.get("fase") ?? "";
+export async function GET(request: Request) {
+  const {searchParams} = new URL(request.url);
+  const fase = (searchParams.get("fase") ?? "preliminar") as Database["public"]["Enums"]["fase"];
   const username = searchParams.get("username") ?? "";
-  const comparsas = searchParams.get("comparsas") ? searchParams.get("comparsas")?.split(",") : "";
-  const chirigotas = searchParams.get("chirigotas")
-    ? searchParams.get("chirigotas")?.split(",")
-    : "";
-  const coros = searchParams.get("coros") ? searchParams.get("coros")?.split(",") : "";
-  const cuartetos = searchParams.get("cuartetos") ? searchParams.get("cuartetos")?.split(",") : "";
-    */
+  const comparsas =
+    searchParams.get("comparsas") != null ? searchParams.get("comparsas")!.split(",") : [];
+  const chirigotas =
+    searchParams.get("chirigotas") != null ? searchParams.get("chirigotas")!.split(",") : [];
+  const coros = searchParams.get("coros") != null ? searchParams.get("coros")!.split(",") : [];
+  const cuartetos =
+    searchParams.get("cuartetos") != null ? searchParams.get("cuartetos")!.split(",") : [];
+
   try {
     return new ImageResponse(
       (

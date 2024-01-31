@@ -61,6 +61,7 @@ export default function AgrupacionesClient({
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
 
+    console.log(url.toString());
     const image = await fetch(url.toString())
       .then((data) => data.blob())
       .catch(() => new Blob());
@@ -76,9 +77,7 @@ export default function AgrupacionesClient({
     }
 
     const clipboardItem = new ClipboardItem({
-      "image/png": new Promise((resolve) => {
-        resolve(image);
-      }),
+      [image.type]: image,
     });
 
     navigator.clipboard
