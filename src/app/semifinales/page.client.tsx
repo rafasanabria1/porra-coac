@@ -62,6 +62,15 @@ export default function AgrupacionesClient({
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
 
+    toast({
+      title: "La imagen se abrirá en una nueva ventana",
+      description: "Ahora puedes descargar tu imagen para compartirla donde quieras ;)",
+    });
+
+    setTimeout(() => {
+      window.open(url, "_blank");
+    }, 2500);
+    /*
     const image = await fetch(url.toString())
       .then((data) => data.blob())
       .catch(() => new Blob());
@@ -97,6 +106,7 @@ export default function AgrupacionesClient({
           variant: "destructive",
         });
       });
+      */
   };
 
   if (!agrupaciones) {
@@ -162,7 +172,8 @@ export default function AgrupacionesClient({
           </main>
           <footer className="mt-8">
             <HeadingH3>
-              Comparte tu <span className="text-gray-500">{hashtag.semifinal}</span>
+              Genera una imagen para poder compartir tu{" "}
+              <span className="text-gray-500">{hashtag.semifinal}</span>
             </HeadingH3>
             <FormField
               control={form.control}
@@ -179,7 +190,7 @@ export default function AgrupacionesClient({
                       id="username"
                     />
                     <Button disabled={isSubmitting} type="submit">
-                      {`${isSubmitting ? "Copiando imagen..." : "Copiar imagen"}`}
+                      {`${isSubmitting ? "Generando imagen..." : "Generar imagen"}`}
                     </Button>
                   </div>
                   <FormMessage />
