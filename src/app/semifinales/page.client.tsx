@@ -4,6 +4,7 @@ import type {AgrupacionCuartosEntity} from "@types";
 import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
+import {useState} from "react";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
@@ -21,6 +22,7 @@ export default function AgrupacionesClient({
   agrupaciones: AgrupacionCuartosEntity[] | null;
 }) {
   const {toast} = useToast();
+  const [imageURL, setImageURL] = useState("");
 
   const FormSchema = z.object({
     username: z.string().min(3, {
@@ -62,51 +64,7 @@ export default function AgrupacionesClient({
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
 
-    toast({
-      title: "La imagen se abrirá en una nueva ventana",
-      description: "Ahora puedes descargar tu imagen para compartirla donde quieras ;)",
-    });
-
-    setTimeout(() => {
-      window.open(url, "_blank");
-    }, 2500);
-    /*
-    const image = await fetch(url.toString())
-      .then((data) => data.blob())
-      .catch(() => new Blob());
-
-    if (image.size === 0) {
-      toast({
-        title: "Error al generar la imagen",
-        description: "Inténtalo de nuevo más tarde.",
-        variant: "destructive",
-      });
-
-      return;
-    }
-
-    const clipboardItem = new ClipboardItem({
-      "image/png": new Promise((resolve) => {
-        resolve(image);
-      }),
-    });
-
-    navigator.clipboard
-      .write([clipboardItem])
-      .then(() => {
-        toast({
-          title: "Copiado al portapapeles!",
-          description: "Ahora puedes pegar tu imagen para compartirla donde quieras ;)",
-        });
-      })
-      .catch(() => {
-        toast({
-          title: "Error al copiar al portapapeles",
-          description: "Inténtalo de nuevo más tarde.",
-          variant: "destructive",
-        });
-      });
-      */
+    setImageURL(url.toString());
   };
 
   if (!agrupaciones) {
@@ -181,7 +139,7 @@ export default function AgrupacionesClient({
               render={({field}) => (
                 <FormItem className="pt-4">
                   <FormLabel htmlFor="username">Nombre de usuario a mostrar al compartir</FormLabel>
-                  <div className="flex flex-row items-center justify-center space-x-4">
+                  <div className="flex flex-row items-center justify-between space-x-4">
                     <Input
                       placeholder="carnaval_cadiz"
                       type="text"
@@ -200,6 +158,7 @@ export default function AgrupacionesClient({
           </footer>
         </form>
       </Form>
+      {imageURL ? <img alt={`La ${hashtag.semifinal}`} className="my-8" src={imageURL} /> : null}
     </article>
   );
 }

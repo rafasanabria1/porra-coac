@@ -53,7 +53,7 @@ export async function GET(request: Request) {
         >
           <div tw="flex flex-col">
             <h1 tw="flex justify-center text-lg items-center m-0 p-0">
-              La
+              la
               <strong tw="px-2 font-bold text-2xl">{hashtag[fase]}</strong>
               de
               <strong tw="px-2 font-bold text-2xl">@{username}</strong>
@@ -142,6 +142,9 @@ export async function GET(request: Request) {
                 {hashtag[fase]}
               </div>
             </div>
+          </div>
+          <div tw="absolute top-2 right-2 text-xs font-extrabold text-gray-700">
+            #PORRACOAC desarrollado por @rafasanabria1
           </div>
         </main>
       ),
