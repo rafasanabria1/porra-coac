@@ -150,7 +150,7 @@ export async function GET(request: Request) {
       ),
       {
         width: 1200,
-        height: 700,
+        height: 800,
       },
     );
   } catch {
