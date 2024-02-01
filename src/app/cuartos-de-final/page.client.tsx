@@ -12,6 +12,7 @@ import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import HeadingH2 from "@/components/ui/headingh2";
 import HeadingH3 from "@/components/ui/headingh3";
+import {hashtag} from "@/lib/utils";
 
 export default function AgrupacionesClient({
   agrupaciones,
@@ -52,8 +53,9 @@ export default function AgrupacionesClient({
   }
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    const url = new URL("/api/cuartos-de-final/copy-image", window.location.origin);
+    const url = new URL("/api/og", window.location.origin);
 
+    url.searchParams.append("fase", "cuartos");
     url.searchParams.append("username", data.username);
     url.searchParams.append("comparsas", data.comparsas.toString());
     url.searchParams.append("chirigotas", data.chirigotas.toString());
@@ -124,7 +126,7 @@ export default function AgrupacionesClient({
         </main>
         <footer className="mt-8">
           <HeadingH3>
-            Comparte tu <span className="text-gray-500">#PORRACOAC2024Cuartos</span>
+            Comparte tu <span className="text-gray-500">{hashtag.cuartos}</span>
           </HeadingH3>
           <FormField
             control={form.control}

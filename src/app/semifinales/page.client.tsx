@@ -13,6 +13,7 @@ import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui
 import HeadingH2 from "@/components/ui/headingh2";
 import HeadingH3 from "@/components/ui/headingh3";
 import {useToast} from "@/components/ui/use-toast";
+import {hashtag} from "@/lib/utils";
 
 export default function AgrupacionesClient({
   agrupaciones,
@@ -52,9 +53,9 @@ export default function AgrupacionesClient({
   const {isSubmitting} = form.formState;
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    const url = new URL("/api/copy-image", window.location.origin);
+    const url = new URL("/api/og", window.location.origin);
 
-    url.searchParams.append("fase", "semifinales");
+    url.searchParams.append("fase", "semifinal");
     url.searchParams.append("username", data.username);
     url.searchParams.append("comparsas", data.comparsas.toString());
     url.searchParams.append("chirigotas", data.chirigotas.toString());
@@ -134,7 +135,7 @@ export default function AgrupacionesClient({
           </main>
           <footer className="mt-8">
             <HeadingH3>
-              Comparte tu <span className="text-gray-500">#PORRACOAC2024Semifinales</span>
+              Comparte tu <span className="text-gray-500">{hashtag.semifinal}</span>
             </HeadingH3>
             <FormField
               control={form.control}
