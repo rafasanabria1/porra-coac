@@ -51,7 +51,7 @@ export async function GET(request: Request) {
             color: "white",
           }}
         >
-          <div tw="flex flex-col space-between">
+          <div tw="flex flex-col">
             <h1 tw="flex justify-center text-lg items-center m-0 p-0">
               La
               <strong tw="px-2 font-bold text-2xl">{hashtag[fase]}</strong>
