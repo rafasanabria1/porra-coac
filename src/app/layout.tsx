@@ -1,5 +1,6 @@
 import type {Metadata} from "next";
 
+import {Analytics} from "@vercel/analytics/react";
 import Link from "next/link";
 
 import "./globals.css";
@@ -25,6 +26,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           PORRA COAC 2024 by @rafasanabria1
         </footer>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
