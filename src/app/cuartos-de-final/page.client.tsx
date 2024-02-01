@@ -13,12 +13,15 @@ import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui
 import HeadingH2 from "@/components/ui/headingh2";
 import HeadingH3 from "@/components/ui/headingh3";
 import {hashtag} from "@/lib/utils";
+import {useToast} from "@/components/ui/use-toast";
 
 export default function AgrupacionesClient({
   agrupaciones,
 }: {
   agrupaciones: AgrupacionPreliminaresEntity[] | null;
 }) {
+  const {toast} = useToast();
+
   const FormSchema = z.object({
     username: z.string().min(3, {
       message: "El nombre de usuario debe tener al menos 3 caracteres.",
@@ -47,10 +50,7 @@ export default function AgrupacionesClient({
       cuartetos: [],
     },
   });
-
-  if (!agrupaciones) {
-    return null;
-  }
+  const {isSubmitting} = form.formState;
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     const url = new URL("/api/og", window.location.origin);
@@ -61,10 +61,47 @@ export default function AgrupacionesClient({
     url.searchParams.append("chirigotas", data.chirigotas.toString());
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
-    const image = await fetch(url.toString()).then((data) => data.blob());
 
-    await navigator.clipboard.write([new ClipboardItem({[image.type]: image})]);
+    const image = await fetch(url.toString())
+      .then((data) => data.blob())
+      .catch(() => new Blob());
+
+    if (image.size === 0) {
+      toast({
+        title: "Error al generar la imagen",
+        description: "Inténtalo de nuevo más tarde.",
+        variant: "destructive",
+      });
+
+      return;
+    }
+
+    const clipboardItem = new ClipboardItem({
+      "image/png": new Promise((resolve) => {
+        resolve(image);
+      }),
+    });
+
+    navigator.clipboard
+      .write([clipboardItem])
+      .then(() => {
+        toast({
+          title: "Copiado al portapapeles!",
+          description: "Ahora puedes pegar tu imagen para compartirla donde quieras ;)",
+        });
+      })
+      .catch(() => {
+        toast({
+          title: "Error al copiar al portapapeles",
+          description: "Inténtalo de nuevo más tarde.",
+          variant: "destructive",
+        });
+      });
   };
+
+  if (!agrupaciones) {
+    return null;
+  }
 
   const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
   const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
@@ -133,10 +170,18 @@ export default function AgrupacionesClient({
             name="username"
             render={({field}) => (
               <FormItem className="pt-4">
-                <FormLabel>Nombre de usuario a mostrar al compartir</FormLabel>
+                <FormLabel htmlFor="username">Nombre de usuario a mostrar al compartir</FormLabel>
                 <div className="flex flex-row items-center justify-center space-x-4">
-                  <Input placeholder="carnaval_cadiz" type="text" {...field} />
-                  <Button type="submit">Copiar imagen</Button>
+                  <Input
+                    placeholder="carnaval_cadiz"
+                    type="text"
+                    {...field}
+                    autoComplete="username"
+                    id="username"
+                  />
+                  <Button disabled={isSubmitting} type="submit">
+                    {`${isSubmitting ? "Copiando imagen..." : "Copiar imagen"}`}
+                  </Button>
                 </div>
                 <FormMessage />
               </FormItem>
