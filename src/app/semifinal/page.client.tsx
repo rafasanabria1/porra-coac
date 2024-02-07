@@ -5,6 +5,7 @@ import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import {useState} from "react";
+import Image from "next/image";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
@@ -13,15 +14,14 @@ import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import HeadingH2 from "@/components/ui/headingh2";
 import HeadingH3 from "@/components/ui/headingh3";
-import {useToast} from "@/components/ui/use-toast";
 import {hashtag} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
 
 export default function AgrupacionesClient({
   agrupaciones,
 }: {
   agrupaciones: AgrupacionCuartosEntity[] | null;
 }) {
-  const {toast} = useToast();
   const [imageURL, setImageURL] = useState("");
 
   const FormSchema = z.object({
@@ -55,6 +55,8 @@ export default function AgrupacionesClient({
   const {isSubmitting} = form.formState;
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    setImageURL("");
+
     const url = new URL("/api/og", window.location.origin);
 
     url.searchParams.append("fase", "semifinal");
@@ -64,7 +66,7 @@ export default function AgrupacionesClient({
     url.searchParams.append("coros", data.coros.toString());
     url.searchParams.append("cuartetos", data.cuartetos.toString());
 
-    setImageURL(url.toString());
+    setImageURL(url.pathname + url.search);
   };
 
   if (!agrupaciones) {
@@ -82,7 +84,7 @@ export default function AgrupacionesClient({
         {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <header>
-            <HeadingH2>Pase a semifinales</HeadingH2>
+            <HeadingH2>Pase a la Gran Final</HeadingH2>
           </header>
           <main className="grid gap-16">
             <Accordion collapsible type="single">
@@ -92,7 +94,7 @@ export default function AgrupacionesClient({
                   form={form}
                   formIndex="comparsas"
                   titulo="Comparsas"
-                  totalPosibles={10}
+                  totalPosibles={4}
                   totalSeleccionados={form.watch("comparsas").length}
                 />
               </AccordionItem>
@@ -102,7 +104,7 @@ export default function AgrupacionesClient({
                   form={form}
                   formIndex="chirigotas"
                   titulo="Chirigotas"
-                  totalPosibles={10}
+                  totalPosibles={4}
                   totalSeleccionados={form.watch("chirigotas").length}
                 />
               </AccordionItem>
@@ -112,7 +114,7 @@ export default function AgrupacionesClient({
                   form={form}
                   formIndex="coros"
                   titulo="Coros"
-                  totalPosibles={7}
+                  totalPosibles={4}
                   totalSeleccionados={form.watch("coros").length}
                 />
               </AccordionItem>
@@ -158,7 +160,25 @@ export default function AgrupacionesClient({
           </footer>
         </form>
       </Form>
-      {imageURL ? <img alt={`La ${hashtag.semifinal}`} className="my-8" src={imageURL} /> : null}
+      {isSubmitting ? <Skeleton className="my-8 h-[350px] w-full rounded-xl" /> : null}
+      {imageURL ? (
+        <div className="my-8 flex flex-col gap-6 text-sm">
+          <a href={imageURL} rel="noopener" target="_blank">
+            <Image
+              alt={`La ${hashtag.semifinal}`}
+              blurDataURL="/blur.webp"
+              className="rounded-xl shadow-lg shadow-black drop-shadow-sm "
+              height={600}
+              placeholder="blur"
+              src={imageURL}
+              width={1200}
+            />
+          </a>
+          <span className="block text-center">
+            Pincha en la imagen para abrirla en una nueva ventana.
+          </span>
+        </div>
+      ) : null}
     </article>
   );
 }

@@ -1,5 +1,10 @@
 import type {Database} from "@database";
-import type {AgrupacionCuartosEntity, AgrupacionEntity, AgrupacionPreliminaresEntity} from "@types";
+import type {
+  AgrupacionCuartosEntity,
+  AgrupacionEntity,
+  AgrupacionPreliminaresEntity,
+  AgrupacionSemifinalesEntity,
+} from "@types";
 
 import {createClient} from "@supabase/supabase-js";
 
@@ -39,6 +44,24 @@ export const api = {
           ascending: true,
         })
         .returns<AgrupacionCuartosEntity[]>();
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      return agrupaciones;
+    },
+    semifinalesByOrder: async () => {
+      const {data: agrupaciones, error} = await supabase
+        .from("semifinales")
+        .select("fecha, orden, ...agrupaciones(id, nombre, modalidad)")
+        .order("fecha", {
+          ascending: true,
+        })
+        .order("orden", {
+          ascending: true,
+        })
+        .returns<AgrupacionSemifinalesEntity[]>();
 
       if (error) {
         throw new Error(error.message);

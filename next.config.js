@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "/semifinales",
+        destination: "/semifinal",
         permanent: false,
       },
     ];
