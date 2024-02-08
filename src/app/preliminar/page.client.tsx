@@ -10,8 +10,7 @@ import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import HeadingH2 from "@/components/ui/headingh2";
-import HeadingH3 from "@/components/ui/headingh3";
+import {HeadingH2, HeadingH3} from "@/components/ui/heading";
 import {hashtag} from "@/lib/utils";
 import {useToast} from "@/components/ui/use-toast";
 
@@ -111,7 +110,7 @@ export default function AgrupacionesClient({
   return (
     <article className="mx-auto max-w-2xl">
       <Form {...form}>
-        <header>
+        <header className="my-8">
           <HeadingH2>Pase a cuartos de final</HeadingH2>
         </header>
         <main>

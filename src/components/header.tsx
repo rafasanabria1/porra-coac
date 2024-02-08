@@ -44,6 +44,9 @@ export default function Header() {
               <Link href="/cuartosdefinal">#PorraCOAC2024Cuartos</Link>
             </DropdownMenuItem>*/}
             <DropdownMenuItem className="pointer">
+              <Link href="/final">#PorraCOAC2024GranFinal</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="pointer">
               <Link href="/semifinal">#PorraCOAC2024Semifinales</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

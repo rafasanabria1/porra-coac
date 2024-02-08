@@ -2,6 +2,7 @@ import type {Database} from "@database";
 import type {
   AgrupacionCuartosEntity,
   AgrupacionEntity,
+  AgrupacionFinalEntity,
   AgrupacionPreliminaresEntity,
   AgrupacionSemifinalesEntity,
 } from "@types";
@@ -62,6 +63,24 @@ export const api = {
           ascending: true,
         })
         .returns<AgrupacionSemifinalesEntity[]>();
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      return agrupaciones;
+    },
+    finalByOrder: async () => {
+      const {data: agrupaciones, error} = await supabase
+        .from("final")
+        .select("fecha, orden, ...agrupaciones(id, nombre, modalidad)")
+        .order("fecha", {
+          ascending: true,
+        })
+        .order("orden", {
+          ascending: true,
+        })
+        .returns<AgrupacionFinalEntity[]>();
 
       if (error) {
         throw new Error(error.message);

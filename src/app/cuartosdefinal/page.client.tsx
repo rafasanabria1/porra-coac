@@ -11,8 +11,7 @@ import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import HeadingH2 from "@/components/ui/headingh2";
-import HeadingH3 from "@/components/ui/headingh3";
+import {HeadingH2, HeadingH3} from "@/components/ui/heading";
 import {hashtag} from "@/lib/utils";
 
 export default function AgrupacionesClient({
@@ -79,7 +78,7 @@ export default function AgrupacionesClient({
       <Form {...form}>
         {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <header>
+          <header className="my-8">
             <HeadingH2>Pase a semifinales</HeadingH2>
           </header>
           <main className="grid gap-16">

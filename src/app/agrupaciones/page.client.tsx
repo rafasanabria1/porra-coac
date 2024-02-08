@@ -2,7 +2,7 @@ import type {AgrupacionEntity} from "@types";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidad from "@/components/acordeon-modalidad-detalle";
-import HeadingH2 from "@/components/ui/headingh2";
+import {HeadingH2} from "@/components/ui/heading";
 
 export default async function AgrupacionesClient({
   agrupaciones,

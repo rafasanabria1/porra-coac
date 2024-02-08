@@ -1,5 +1,5 @@
 "use client";
-import type {AgrupacionSemifinalesEntity} from "@types";
+import type {AgrupacionEntity, AgrupacionFinalEntity} from "@types";
 
 import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -7,19 +7,18 @@ import {useForm} from "react-hook-form";
 import {useState} from "react";
 import Image from "next/image";
 
-import {Accordion, AccordionItem} from "@/components/ui/accordion";
-import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {HeadingH2, HeadingH3} from "@/components/ui/heading";
+import {HeadingH2, HeadingH3, HeadingH4} from "@/components/ui/heading";
 import {hashtag} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
+import {Card, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
 export default function AgrupacionesClient({
   agrupaciones,
 }: {
-  agrupaciones: AgrupacionSemifinalesEntity[] | null;
+  agrupaciones: AgrupacionFinalEntity[] | null;
 }) {
   const [imageURL, setImageURL] = useState("");
 
@@ -27,28 +26,12 @@ export default function AgrupacionesClient({
     username: z.string().min(3, {
       message: "El nombre de usuario debe tener al menos 3 caracteres.",
     }),
-    comparsas: z.array(z.string()).refine((value) => value.length <= 10, {
-      message: "No puedes seleccionar más de 10 comparsas.",
-    }),
-    chirigotas: z.array(z.string()).refine((value) => value.length <= 10, {
-      message: "No puedes seleccionar más de 10 chirigotas.",
-    }),
-    coros: z.array(z.string()).refine((value) => value.length <= 7, {
-      message: "No puedes seleccionar más de 7 coros.",
-    }),
-    cuartetos: z.array(z.string()).refine((value) => value.length <= 3, {
-      message: "No puedes seleccionar más de 3 cuartetos.",
-    }),
   });
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       username: "",
-      comparsas: [],
-      chirigotas: [],
-      coros: [],
-      cuartetos: [],
     },
   });
   const {isSubmitting} = form.formState;
@@ -58,12 +41,12 @@ export default function AgrupacionesClient({
 
     const searchParams = new URLSearchParams();
 
-    searchParams.append("fase", "semifinal");
+    searchParams.append("fase", "final");
     searchParams.append("username", data.username);
-    searchParams.append("comparsas", data.comparsas.toString());
-    searchParams.append("chirigotas", data.chirigotas.toString());
-    searchParams.append("coros", data.coros.toString());
-    searchParams.append("cuartetos", data.cuartetos.toString());
+    // searchParams.append("comparsas", data.comparsas.toString());
+    // searchParams.append("chirigotas", data.chirigotas.toString());
+    // searchParams.append("coros", data.coros.toString());
+    // searchParams.append("cuartetos", data.cuartetos.toString());
 
     setImageURL(`/api/og?${searchParams.toString()}`);
   };
@@ -72,62 +55,51 @@ export default function AgrupacionesClient({
     return null;
   }
 
-  const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
+  const comparsas = agrupaciones.filter(
+    (agrupacion) => agrupacion.modalidad === "comparsa",
+  ) as AgrupacionEntity[];
   const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
   const coros = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro");
   const cuartetos = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto");
 
   return (
-    <article className="mx-auto max-w-2xl">
+    <article className="max-w-full">
       <Form {...form}>
         {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <header className="my-8">
-            <HeadingH2>Pase a la Gran Final</HeadingH2>
+            <HeadingH2>Resultado de la Gran Final</HeadingH2>
           </header>
           <main className="grid gap-16">
-            <Accordion collapsible type="single">
-              <AccordionItem value="comparsas">
-                <AcordeonModalidadPorra
-                  agrupaciones={comparsas}
-                  form={form}
-                  formIndex="comparsas"
-                  titulo="Comparsas"
-                  totalPosibles={4}
-                  totalSeleccionados={form.watch("comparsas").length}
-                />
-              </AccordionItem>
-              <AccordionItem value="chirigotas">
-                <AcordeonModalidadPorra
-                  agrupaciones={chirigotas}
-                  form={form}
-                  formIndex="chirigotas"
-                  titulo="Chirigotas"
-                  totalPosibles={4}
-                  totalSeleccionados={form.watch("chirigotas").length}
-                />
-              </AccordionItem>
-              <AccordionItem value="coros">
-                <AcordeonModalidadPorra
-                  agrupaciones={coros}
-                  form={form}
-                  formIndex="coros"
-                  titulo="Coros"
-                  totalPosibles={4}
-                  totalSeleccionados={form.watch("coros").length}
-                />
-              </AccordionItem>
-              <AccordionItem value="cuartetos">
-                <AcordeonModalidadPorra
-                  agrupaciones={cuartetos}
-                  form={form}
-                  formIndex="cuartetos"
-                  titulo="Cuartetos"
-                  totalPosibles={3}
-                  totalSeleccionados={form.watch("cuartetos").length}
-                />
-              </AccordionItem>
-            </Accordion>
+            <section>
+              <HeadingH4 className="border-b border-slate-400/25 text-left">Comparsas</HeadingH4>
+              <div className="grid-cols- mt-8 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
+                {comparsas.map((agrupacion, index) => {
+                  return (
+                    <Card key={agrupacion.id}>
+                      <CardHeader>
+                        <Image
+                          alt={agrupacion.nombre}
+                          height={300}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          src={`/agrupaciones-images/${agrupacion.id}.jpg`}
+                          style={{
+                            width: "100%",
+                            height: "auto",
+                          }}
+                          width={500}
+                        />
+                        <CardTitle>{agrupacion.nombre}</CardTitle>
+                      </CardHeader>
+                    </Card>
+                  );
+                })}
+              </div>
+            </section>
+
+            <HeadingH4 className="text-left">Chirigotas</HeadingH4>
+            <HeadingH4 className="text-left">Coros</HeadingH4>
+            <HeadingH4 className="text-left">Cuartetos</HeadingH4>
           </main>
           <footer className="mt-8">
             <HeadingH3>
