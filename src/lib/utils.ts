@@ -13,3 +13,18 @@ export const hashtags: Record<Database["public"]["Enums"]["fase"], string> = {
   semifinal: "#PORRACOAC2024Semifinales",
   final: "#PORRACOAC2024GranFinal",
 };
+
+export const indexToPremio = (index: number | undefined) => {
+  switch (index) {
+    case 0:
+      return "Primer premio";
+    case 1:
+      return "Segundo premio";
+    case 2:
+      return "Tercer premio";
+    case 3:
+      return "Cuarto premio";
+    default:
+      return "";
+  }
+};

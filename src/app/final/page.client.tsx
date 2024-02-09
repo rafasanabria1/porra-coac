@@ -6,21 +6,32 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import {useState} from "react";
 import Image from "next/image";
+import {PointerSensor, TouchSensor, useSensor, useSensors} from "@dnd-kit/core";
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {HeadingH2, HeadingH3, HeadingH4} from "@/components/ui/heading";
+import {HeadingH2, HeadingH3} from "@/components/ui/heading";
 import {hashtags} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
-import {Card, CardHeader, CardTitle} from "@/components/ui/card";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import ModalidadSortable from "@/app/final/modalidad-sortable";
 
-export default function AgrupacionesClient({
-  agrupaciones,
-}: {
-  agrupaciones: AgrupacionEntity[] | null;
-}) {
+export default function AgrupacionesClient({agrupaciones}: {agrupaciones: AgrupacionEntity[]}) {
+  const [comparsas, setComparsas] = useState<AgrupacionEntity[]>(
+    agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa"),
+  );
+  const [chirigotas, setChirigotas] = useState<AgrupacionEntity[]>(
+    agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota"),
+  );
+  const [coros, setCoros] = useState<AgrupacionEntity[]>(
+    agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro"),
+  );
+  const [cuartetos, setCuartetos] = useState<AgrupacionEntity[]>(
+    agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto"),
+  );
+  const sensors = useSensors(useSensor(PointerSensor), useSensor(TouchSensor));
+
   const [imageURL, setImageURL] = useState("");
 
   const FormSchema = z.object({
@@ -44,6 +55,8 @@ export default function AgrupacionesClient({
 
     searchParams.append("fase", "final");
     searchParams.append("username", data.username);
+
+    console.log({comparsas, chirigotas, coros, cuartetos});
     // searchParams.append("comparsas", data.comparsas.toString());
     // searchParams.append("chirigotas", data.chirigotas.toString());
     // searchParams.append("coros", data.coros.toString());
@@ -51,15 +64,6 @@ export default function AgrupacionesClient({
 
     setImageURL(`/api/og?${searchParams.toString()}`);
   };
-
-  if (!agrupaciones) {
-    return null;
-  }
-
-  const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
-  const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
-  const coros = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro");
-  const cuartetos = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto");
 
   return (
     <article className="mx-auto max-w-6xl">
@@ -91,114 +95,30 @@ export default function AgrupacionesClient({
             </Popover>
           </header>
           <main className="grid">
-            <section>
-              <HeadingH4 className="border-b border-slate-400/25 text-left">Comparsas</HeadingH4>
-              <div className="my-8 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-                {comparsas.map((agrupacion, index) => {
-                  return (
-                    <Card key={agrupacion.id}>
-                      <CardHeader>
-                        <Image
-                          alt={agrupacion.nombre}
-                          height={300}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                          src={`/agrupaciones-images/${agrupacion.id}.jpg`}
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                          }}
-                          width={500}
-                        />
-                        <CardTitle className="text-balance text-center">
-                          {agrupacion.nombre}
-                        </CardTitle>
-                      </CardHeader>
-                    </Card>
-                  );
-                })}
-              </div>
-            </section>
-            <section>
-              <HeadingH4 className="border-b border-slate-400/25 text-left">Chirigotas</HeadingH4>
-              <div className="my-8 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-                {chirigotas.map((agrupacion, index) => {
-                  return (
-                    <Card key={agrupacion.id}>
-                      <CardHeader>
-                        <Image
-                          alt={agrupacion.nombre}
-                          height={300}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                          src={`/agrupaciones-images/${agrupacion.id}.jpg`}
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                          }}
-                          width={500}
-                        />
-                        <CardTitle className="text-balance text-center">
-                          {agrupacion.nombre}
-                        </CardTitle>
-                      </CardHeader>
-                    </Card>
-                  );
-                })}
-              </div>
-            </section>
-            <section>
-              <HeadingH4 className="border-b border-slate-400/25 text-left">Coros</HeadingH4>
-              <div className="my-8 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-                {coros.map((agrupacion, index) => {
-                  return (
-                    <Card key={agrupacion.id}>
-                      <CardHeader>
-                        <Image
-                          alt={agrupacion.nombre}
-                          height={300}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                          src={`/agrupaciones-images/${agrupacion.id}.jpg`}
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                          }}
-                          width={500}
-                        />
-                        <CardTitle className="text-balance text-center">
-                          {agrupacion.nombre}
-                        </CardTitle>
-                      </CardHeader>
-                    </Card>
-                  );
-                })}
-              </div>
-            </section>
-            <section>
-              <HeadingH4 className="border-b border-slate-400/25 text-left">Cuartetos</HeadingH4>
-              <div className="my-8 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-                {cuartetos.map((agrupacion, index) => {
-                  return (
-                    <Card key={agrupacion.id}>
-                      <CardHeader>
-                        <Image
-                          alt={agrupacion.nombre}
-                          height={300}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                          src={`/agrupaciones-images/${agrupacion.id}.jpg`}
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                          }}
-                          width={500}
-                        />
-                        <CardTitle className="text-balance text-center">
-                          {agrupacion.nombre}
-                        </CardTitle>
-                      </CardHeader>
-                    </Card>
-                  );
-                })}
-              </div>
-            </section>
+            <ModalidadSortable
+              agrupaciones={comparsas}
+              sensors={sensors}
+              setAgrupaciones={setComparsas}
+              titulo="Comparsas"
+            />
+            <ModalidadSortable
+              agrupaciones={chirigotas}
+              sensors={sensors}
+              setAgrupaciones={setChirigotas}
+              titulo="Chirigotas"
+            />
+            <ModalidadSortable
+              agrupaciones={coros}
+              sensors={sensors}
+              setAgrupaciones={setCoros}
+              titulo="Coros"
+            />
+            <ModalidadSortable
+              agrupaciones={cuartetos}
+              sensors={sensors}
+              setAgrupaciones={setCuartetos}
+              titulo="Cuartetos"
+            />
           </main>
           <footer className="mt-8">
             <HeadingH3>
