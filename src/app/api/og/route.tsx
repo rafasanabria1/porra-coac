@@ -537,7 +537,7 @@ async function buildImageFinal({
                       <img
                         alt={agrupacion.nombre}
                         height={133}
-                        src={`http://localhost:3000/agrupaciones-images/${agrupacion.id}.jpg`}
+                        src={`https://porra-coac.vercel.app/agrupaciones-images/${agrupacion.id}.jpg`}
                         tw="mx-auto rounded-lg"
                         width={200}
                       />
@@ -582,7 +582,7 @@ async function buildImageFinal({
                       <img
                         alt={agrupacion.nombre}
                         height={133}
-                        src={`http://localhost:3000/agrupaciones-images/${agrupacion.id}.jpg`}
+                        src={`https://porra-coac.vercel.app/agrupaciones-images/${agrupacion.id}.jpg`}
                         tw="mx-auto rounded-lg"
                         width={200}
                       />
@@ -619,7 +619,7 @@ async function buildImageFinal({
                       <img
                         alt={agrupacion.nombre}
                         height={133}
-                        src={`http://localhost:3000/agrupaciones-images/${agrupacion.id}.jpg`}
+                        src={`https://porra-coac.vercel.app/agrupaciones-images/${agrupacion.id}.jpg`}
                         tw="mx-auto rounded-lg"
                         width={200}
                       />
@@ -656,7 +656,7 @@ async function buildImageFinal({
                       <img
                         alt={agrupacion.nombre}
                         height={133}
-                        src={`http://localhost:3000/agrupaciones-images/${agrupacion.id}.jpg`}
+                        src={`https://porra-coac.vercel.app/agrupaciones-images/${agrupacion.id}.jpg`}
                         tw="mx-auto rounded-lg"
                         width={200}
                       />
