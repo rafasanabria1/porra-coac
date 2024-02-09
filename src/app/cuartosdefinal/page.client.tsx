@@ -12,7 +12,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {HeadingH2, HeadingH3} from "@/components/ui/heading";
-import {hashtag} from "@/lib/utils";
+import {hashtags} from "@/lib/utils";
 
 export default function AgrupacionesClient({
   agrupaciones,
@@ -128,7 +128,7 @@ export default function AgrupacionesClient({
           <footer className="mt-8">
             <HeadingH3>
               Genera una imagen para poder compartir tu{" "}
-              <span className="text-gray-500">{hashtag.semifinal}</span>
+              <span className="text-gray-500">{hashtags.semifinal}</span>
             </HeadingH3>
             <FormField
               control={form.control}
@@ -158,7 +158,7 @@ export default function AgrupacionesClient({
       {imageURL ? (
         <div className="my-2 flex flex-col gap-1 text-sm">
           <a href={imageURL} rel="noopener" target="_blank">
-            <img alt={`La ${hashtag.semifinal}`} className="" src={imageURL} />
+            <img alt={`La ${hashtags.semifinal}`} className="" src={imageURL} />
           </a>
           <span className="block text-center">
             Pincha en la imagen para abrirla en una nueva ventana.

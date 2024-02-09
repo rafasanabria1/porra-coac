@@ -11,7 +11,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {HeadingH2, HeadingH3} from "@/components/ui/heading";
-import {hashtag} from "@/lib/utils";
+import {hashtags} from "@/lib/utils";
 import {useToast} from "@/components/ui/use-toast";
 
 export default function AgrupacionesClient({
@@ -162,7 +162,7 @@ export default function AgrupacionesClient({
         </main>
         <footer className="mt-8">
           <HeadingH3>
-            Comparte tu <span className="text-gray-500">{hashtag.cuartos}</span>
+            Comparte tu <span className="text-gray-500">{hashtags.cuartos}</span>
           </HeadingH3>
           <FormField
             control={form.control}

@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const hashtag: Record<Database["public"]["Enums"]["fase"], string> = {
+export const hashtags: Record<Database["public"]["Enums"]["fase"], string> = {
   preliminar: "",
   cuartos: "#PORRACOAC2024Cuartos",
   semifinal: "#PORRACOAC2024Semifinales",

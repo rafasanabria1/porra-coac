@@ -13,7 +13,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {HeadingH2, HeadingH3} from "@/components/ui/heading";
-import {hashtag} from "@/lib/utils";
+import {hashtags} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
 
 export default function AgrupacionesClient({
@@ -132,7 +132,7 @@ export default function AgrupacionesClient({
           <footer className="mt-8">
             <HeadingH3>
               Genera una imagen para poder compartir tu{" "}
-              <span className="text-gray-500">{hashtag.semifinal}</span>
+              <span className="text-gray-500">{hashtags.semifinal}</span>
             </HeadingH3>
             <FormField
               control={form.control}
@@ -164,7 +164,7 @@ export default function AgrupacionesClient({
         <div className="my-8 flex flex-col gap-6 text-sm">
           <a href={imageURL} rel="noopener" target="_blank">
             <Image
-              alt={`La ${hashtag.semifinal}`}
+              alt={`La ${hashtags.semifinal}`}
               blurDataURL="/blur.webp"
               className="rounded-xl shadow-lg shadow-black drop-shadow-sm "
               height={600}

@@ -4,7 +4,7 @@ import type {Database} from "@database";
 import {ImageResponse} from "next/og";
 
 import {api} from "@/lib/api";
-import {hashtag} from "@/lib/utils";
+import {hashtags} from "@/lib/utils";
 
 export const runtime = "edge";
 
@@ -90,7 +90,7 @@ async function buildImagePreliminares({
         <div tw="flex flex-col">
           <h1 tw="flex justify-center text-lg items-center m-0 p-0">
             la
-            <strong tw="px-2 font-bold text-2xl">{hashtag.preliminar}</strong>
+            <strong tw="px-2 font-bold text-2xl">{hashtags.preliminar}</strong>
             de
             <strong tw="px-2 font-bold text-2xl">@{username}</strong>
           </h1>
@@ -175,7 +175,7 @@ async function buildImagePreliminares({
               Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
             </div>
             <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
-              {hashtag.preliminar}
+              {hashtags.preliminar}
             </div>
           </div>
         </div>
@@ -227,7 +227,7 @@ async function buildImageCuartos({
         <div tw="flex flex-col">
           <h1 tw="flex justify-center text-lg items-center m-0 p-0">
             la
-            <strong tw="px-2 font-bold text-2xl">{hashtag.cuartos}</strong>
+            <strong tw="px-2 font-bold text-2xl">{hashtags.cuartos}</strong>
             de
             <strong tw="px-2 font-bold text-2xl">@{username}</strong>
           </h1>
@@ -312,7 +312,7 @@ async function buildImageCuartos({
               Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
             </div>
             <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
-              {hashtag.cuartos}
+              {hashtags.cuartos}
             </div>
           </div>
         </div>
@@ -364,7 +364,7 @@ async function buildImageSemifinales({
         <div tw="flex flex-col gap-8">
           <h1 tw="flex justify-center text-xl items-center m-0 p-0 mb-8">
             la
-            <strong tw="px-2 font-bold text-4xl">{hashtag.semifinal}</strong>
+            <strong tw="px-2 font-bold text-4xl">{hashtags.semifinal}</strong>
             de
             <strong tw="px-2 font-bold text-4xl">@{username}</strong>
           </h1>
@@ -449,7 +449,7 @@ async function buildImageSemifinales({
               Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
             </div>
             <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
-              {hashtag.semifinal}
+              {hashtags.semifinal}
             </div>
           </div>
         </div>
