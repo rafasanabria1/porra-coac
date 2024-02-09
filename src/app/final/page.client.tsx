@@ -56,11 +56,10 @@ export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupa
     searchParams.append("fase", "final");
     searchParams.append("username", data.username);
 
-    console.log({comparsas, chirigotas, coros, cuartetos});
-    // searchParams.append("comparsas", data.comparsas.toString());
-    // searchParams.append("chirigotas", data.chirigotas.toString());
-    // searchParams.append("coros", data.coros.toString());
-    // searchParams.append("cuartetos", data.cuartetos.toString());
+    searchParams.append("comparsas", comparsas.map((agrupacion) => agrupacion.id).toString());
+    searchParams.append("chirigotas", chirigotas.map((agrupacion) => agrupacion.id).toString());
+    searchParams.append("coros", coros.map((agrupacion) => agrupacion.id).toString());
+    searchParams.append("cuartetos", cuartetos.map((agrupacion) => agrupacion.id).toString());
 
     setImageURL(`/api/og?${searchParams.toString()}`);
   };

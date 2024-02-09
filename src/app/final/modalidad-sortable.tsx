@@ -66,7 +66,7 @@ export default function AgrupacionesfinalSortable({
         onDragStart={handleDragStart}
       >
         <SortableContext items={agrupaciones} strategy={rectSortingStrategy}>
-          <div className="mb-8 mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mb-8 mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {agrupaciones.map((agrupacion, index) => (
               <AgrupacionSortableItem key={agrupacion.id} agrupacion={agrupacion} index={index} />
             ))}
