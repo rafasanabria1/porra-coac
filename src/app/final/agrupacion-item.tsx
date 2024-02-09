@@ -25,7 +25,7 @@ const AgrupacionItem = forwardRef<HTMLDivElement, Props>(
     };
 
     return (
-      <Card ref={ref} className="relative" style={styles} {...props}>
+      <Card ref={ref} className="relative touch-manipulation select-none" style={styles} {...props}>
         <CardHeader className="relative">
           <Image
             alt={agrupacion.nombre}
