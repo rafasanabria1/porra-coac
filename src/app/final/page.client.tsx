@@ -30,7 +30,20 @@ export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupa
   const [cuartetos, setCuartetos] = useState<AgrupacionEntity[]>(
     agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto"),
   );
-  const sensors = useSensors(useSensor(PointerSensor), useSensor(TouchSensor));
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        delay: 250,
+        tolerance: 5,
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        delay: 250,
+        tolerance: 5,
+      },
+    }),
+  );
 
   const [imageURL, setImageURL] = useState("");
 
