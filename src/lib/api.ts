@@ -1,7 +1,9 @@
 import type {Database} from "@database";
 import type {
+  Actuaciones,
   AgrupacionCuartosEntity,
   AgrupacionEntity,
+  AgrupacionEntityExtended,
   AgrupacionFinalEntity,
   AgrupacionPreliminaresEntity,
   AgrupacionSemifinalesEntity,
@@ -101,7 +103,7 @@ export const api = {
 
       return agrupaciones;
     },
-    list: async () => {
+    list: async (extended = false): Promise<AgrupacionEntityExtended[]> => {
       const {data: agrupaciones, error} = await supabase
         .from("agrupaciones")
         .select("*")
@@ -111,7 +113,18 @@ export const api = {
         throw new Error(error.message);
       }
 
-      return agrupaciones;
+      if (!extended) return agrupaciones;
+
+      const promises = agrupaciones.map(async (agrupacion) => {
+        const actuaciones = await api.agrupaciones.getActuaciones(agrupacion.id);
+
+        return {
+          ...agrupacion,
+          actuaciones,
+        };
+      });
+
+      return Promise.all(promises);
     },
     get: async (id: string) => {
       const {data: agrupacion, error} = await supabase
@@ -125,6 +138,38 @@ export const api = {
       }
 
       return agrupacion;
+    },
+    getActuaciones: async (id: string): Promise<Actuaciones> => {
+      const {data: preliminares} = await supabase
+        .from("preliminares")
+        .select("youtube_id")
+        .eq("agrupacion_id", id)
+        .single();
+
+      const {data: cuartos} = await supabase
+        .from("cuartos")
+        .select("youtube_id")
+        .eq("agrupacion_id", id)
+        .single();
+
+      const {data: semifinales} = await supabase
+        .from("semifinales")
+        .select("youtube_id")
+        .eq("agrupacion_id", id)
+        .single();
+
+      const {data: final} = await supabase
+        .from("final")
+        .select("youtube_id")
+        .eq("agrupacion_id", id)
+        .single();
+
+      return {
+        preliminares: preliminares?.youtube_id ?? null,
+        cuartos: cuartos?.youtube_id ?? null,
+        semifinales: semifinales?.youtube_id ?? null,
+        final: final?.youtube_id ?? null,
+      };
     },
   },
 };

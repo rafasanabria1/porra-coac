@@ -1,4 +1,4 @@
-import type {AgrupacionEntity} from "@types";
+import type {AgrupacionEntityExtended} from "@types";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidad from "@/components/acordeon-modalidad-detalle";
@@ -7,7 +7,7 @@ import {HeadingH2} from "@/components/ui/heading";
 export default async function AgrupacionesClient({
   agrupaciones,
 }: {
-  agrupaciones: AgrupacionEntity[];
+  agrupaciones: AgrupacionEntityExtended[];
 }) {
   const comparsas = agrupaciones
     .filter((agrupacion) => agrupacion.modalidad === "comparsa")

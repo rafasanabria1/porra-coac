@@ -13,3 +13,14 @@ export type AgrupacionCuartosEntity = CuartosEntity & AgrupacionEntity;
 export type AgrupacionSemifinalesEntity = SemifinalesEntity & AgrupacionEntity;
 
 export type AgrupacionFinalEntity = FinalEntity & AgrupacionEntity;
+
+export interface Actuaciones {
+  preliminares: string | null;
+  cuartos: string | null;
+  semifinales: string | null;
+  final: string | null;
+}
+
+export type AgrupacionEntityExtended = AgrupacionEntity & {
+  actuaciones?: Actuaciones;
+};
