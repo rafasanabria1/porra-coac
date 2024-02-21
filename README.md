@@ -23,3 +23,4 @@ Gracias a [@goncy](https://github.com/goncy) por construir el snippet [create-ap
 - Permitir compartir directamente en redes sociales.
 - Permitir hacer login para almacenar las predicciones según usuario.
 - Almacenar el enlace generado por usuario para comprobar los aciertos con sus predicciones.
+- Modificar README para agregar el esquema de bases de datos y las instrucciones para montar el entorno.
