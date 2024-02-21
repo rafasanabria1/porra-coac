@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const hashtags: Record<Database["public"]["Enums"]["fase"], string> = {
-  preliminar: "",
+  preliminar: "#PORRACOAC2024Preliminares",
   cuartos: "#PORRACOAC2024Cuartos",
   semifinal: "#PORRACOAC2024Semifinales",
   final: "#PORRACOAC2024GranFinal",

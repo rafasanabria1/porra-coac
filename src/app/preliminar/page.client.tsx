@@ -4,6 +4,8 @@ import type {AgrupacionPreliminaresEntity} from "@types";
 import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
+import {useState} from "react";
+import Image from "next/image";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
@@ -12,14 +14,14 @@ import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {HeadingH2, HeadingH3} from "@/components/ui/heading";
 import {hashtags} from "@/lib/utils";
-import {useToast} from "@/components/ui/use-toast";
+import {Skeleton} from "@/components/ui/skeleton";
 
 export default function AgrupacionesClient({
   agrupaciones,
 }: {
   agrupaciones: AgrupacionPreliminaresEntity[] | null;
 }) {
-  const {toast} = useToast();
+  const [imageURL, setImageURL] = useState("");
 
   const FormSchema = z.object({
     username: z.string().min(3, {
@@ -52,50 +54,18 @@ export default function AgrupacionesClient({
   const {isSubmitting} = form.formState;
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    const url = new URL("/api/og", window.location.origin);
+    setImageURL("");
 
-    url.searchParams.append("fase", "cuartos");
-    url.searchParams.append("username", data.username);
-    url.searchParams.append("comparsas", data.comparsas.toString());
-    url.searchParams.append("chirigotas", data.chirigotas.toString());
-    url.searchParams.append("coros", data.coros.toString());
-    url.searchParams.append("cuartetos", data.cuartetos.toString());
+    const searchParams = new URLSearchParams();
 
-    const image = await fetch(url.toString())
-      .then((data) => data.blob())
-      .catch(() => new Blob());
+    searchParams.append("fase", "preliminar");
+    searchParams.append("username", data.username);
+    searchParams.append("comparsas", data.comparsas.toString());
+    searchParams.append("chirigotas", data.chirigotas.toString());
+    searchParams.append("coros", data.coros.toString());
+    searchParams.append("cuartetos", data.cuartetos.toString());
 
-    if (image.size === 0) {
-      toast({
-        title: "Error al generar la imagen",
-        description: "Inténtalo de nuevo más tarde.",
-        variant: "destructive",
-      });
-
-      return;
-    }
-
-    const clipboardItem = new ClipboardItem({
-      "image/png": new Promise((resolve) => {
-        resolve(image);
-      }),
-    });
-
-    navigator.clipboard
-      .write([clipboardItem])
-      .then(() => {
-        toast({
-          title: "Copiado al portapapeles!",
-          description: "Ahora puedes pegar tu imagen para compartirla donde quieras ;)",
-        });
-      })
-      .catch(() => {
-        toast({
-          title: "Error al copiar al portapapeles",
-          description: "Inténtalo de nuevo más tarde.",
-          variant: "destructive",
-        });
-      });
+    setImageURL(`/api/og?${searchParams.toString()}`);
   };
 
   if (!agrupaciones) {
@@ -110,12 +80,12 @@ export default function AgrupacionesClient({
   return (
     <article className="mx-auto max-w-2xl">
       <Form {...form}>
-        <header className="my-8">
-          <HeadingH2>Pase a cuartos de final</HeadingH2>
-        </header>
-        <main>
-          {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
-          <form className="grid gap-16" onSubmit={form.handleSubmit(onSubmit)}>
+        {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+          <header className="my-8">
+            <HeadingH2>Pase a cuartos de final</HeadingH2>
+          </header>
+          <main className="grid gap-16">
             <Accordion collapsible type="single">
               <AccordionItem value="comparsas">
                 <AcordeonModalidadPorra
@@ -158,36 +128,58 @@ export default function AgrupacionesClient({
                 />
               </AccordionItem>
             </Accordion>
-          </form>
-        </main>
-        <footer className="mt-8">
-          <HeadingH3>
-            Comparte tu <span className="text-gray-500">{hashtags.cuartos}</span>
-          </HeadingH3>
-          <FormField
-            control={form.control}
-            name="username"
-            render={({field}) => (
-              <FormItem className="pt-4">
-                <FormLabel htmlFor="username">Nombre de usuario a mostrar al compartir</FormLabel>
-                <div className="flex flex-row items-center justify-center space-x-4">
-                  <Input
-                    placeholder="carnaval_cadiz"
-                    type="text"
-                    {...field}
-                    autoComplete="username"
-                    id="username"
-                  />
-                  <Button disabled={isSubmitting} type="submit">
-                    {`${isSubmitting ? "Copiando imagen..." : "Copiar imagen"}`}
-                  </Button>
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </footer>
+          </main>
+          <footer className="mt-8">
+            <HeadingH3>
+              Comparte tu <span className="text-gray-500">{hashtags.preliminar}</span>
+            </HeadingH3>
+            <FormField
+              control={form.control}
+              name="username"
+              render={({field}) => (
+                <FormItem className="pt-4">
+                  <FormLabel htmlFor="username">Nombre de usuario a mostrar al compartir</FormLabel>
+                  <div className="flex flex-row items-center justify-center space-x-4">
+                    <Input
+                      placeholder="carnaval_cadiz"
+                      type="text"
+                      {...field}
+                      autoComplete="username"
+                      id="username"
+                    />
+                    <Button disabled={isSubmitting} type="submit">
+                      {`${isSubmitting ? "Generando imagen..." : "Generar imagen"}`}
+                    </Button>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </footer>
+        </form>
       </Form>
+      {isSubmitting ? <Skeleton className="my-8 h-[350px] w-full rounded-xl" /> : null}
+      {imageURL ? (
+        <div className="my-8 flex flex-col gap-6 text-sm">
+          <a href={imageURL} rel="noopener" target="_blank">
+            <Image
+              alt={`La ${hashtags.preliminar}`}
+              blurDataURL="/blur.webp"
+              className="rounded-xl shadow-lg shadow-black drop-shadow-sm "
+              height={600}
+              placeholder="blur"
+              src={imageURL}
+              width={1200}
+              onLoadingComplete={(element) => {
+                element.scrollIntoView({behavior: "smooth"});
+              }}
+            />
+          </a>
+          <span className="block text-center">
+            Pincha en la imagen para abrirla en una nueva ventana.
+          </span>
+        </div>
+      ) : null}
     </article>
   );
 }

@@ -35,19 +35,19 @@ export default function Header() {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem className="pointer">
-              <Link href="/agrupaciones">Info grupos 2024</Link>
+              <Link href="/agrupaciones">Agrupaciones participantes 2024</Link>
             </DropdownMenuItem>
-            {/*<DropdownMenuItem className="pointer">
+            <DropdownMenuItem className="pointer">
               <Link href="/preliminar">#PorraCOAC2024Preliminares</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="pointer">
-              <Link href="/cuartosdefinal">#PorraCOAC2024Cuartos</Link>
-            </DropdownMenuItem>*/}
-            <DropdownMenuItem className="pointer">
-              <Link href="/final">#PorraCOAC2024GranFinal</Link>
+              <Link href="/cuartos">#PorraCOAC2024Cuartos</Link>
             </DropdownMenuItem>
             <DropdownMenuItem className="pointer">
               <Link href="/semifinal">#PorraCOAC2024Semifinales</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="pointer">
+              <Link href="/final">#PorraCOAC2024GranFinal</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

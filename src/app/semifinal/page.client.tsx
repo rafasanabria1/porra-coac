@@ -171,6 +171,9 @@ export default function AgrupacionesClient({
               placeholder="blur"
               src={imageURL}
               width={1200}
+              onLoadingComplete={(element) => {
+                element.scrollIntoView({behavior: "smooth"});
+              }}
             />
           </a>
           <span className="block text-center">

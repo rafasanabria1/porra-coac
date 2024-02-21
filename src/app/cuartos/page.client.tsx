@@ -5,6 +5,7 @@ import * as z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import {useState} from "react";
+import Image from "next/image";
 
 import {Accordion, AccordionItem} from "@/components/ui/accordion";
 import AcordeonModalidadPorra from "@/components/acordeon-modalidad-porra";
@@ -13,6 +14,7 @@ import {Input} from "@/components/ui/input";
 import {Form, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {HeadingH2, HeadingH3} from "@/components/ui/heading";
 import {hashtags} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
 
 export default function AgrupacionesClient({
   agrupaciones,
@@ -52,16 +54,18 @@ export default function AgrupacionesClient({
   const {isSubmitting} = form.formState;
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    const url = new URL("/api/og", window.location.origin);
+    setImageURL("");
 
-    url.searchParams.append("fase", "semifinal");
-    url.searchParams.append("username", data.username);
-    url.searchParams.append("comparsas", data.comparsas.toString());
-    url.searchParams.append("chirigotas", data.chirigotas.toString());
-    url.searchParams.append("coros", data.coros.toString());
-    url.searchParams.append("cuartetos", data.cuartetos.toString());
+    const searchParams = new URLSearchParams();
 
-    setImageURL(url.toString());
+    searchParams.append("fase", "cuartos");
+    searchParams.append("username", data.username);
+    searchParams.append("comparsas", data.comparsas.toString());
+    searchParams.append("chirigotas", data.chirigotas.toString());
+    searchParams.append("coros", data.coros.toString());
+    searchParams.append("cuartetos", data.cuartetos.toString());
+
+    setImageURL(`/api/og?${searchParams.toString()}`);
   };
 
   if (!agrupaciones) {
@@ -127,8 +131,7 @@ export default function AgrupacionesClient({
           </main>
           <footer className="mt-8">
             <HeadingH3>
-              Genera una imagen para poder compartir tu{" "}
-              <span className="text-gray-500">{hashtags.semifinal}</span>
+              Comparte tu <span className="text-gray-500">{hashtags.semifinal}</span>
             </HeadingH3>
             <FormField
               control={form.control}
@@ -155,10 +158,22 @@ export default function AgrupacionesClient({
           </footer>
         </form>
       </Form>
+      {isSubmitting ? <Skeleton className="my-8 h-[350px] w-full rounded-xl" /> : null}
       {imageURL ? (
-        <div className="my-2 flex flex-col gap-1 text-sm">
+        <div className="my-8 flex flex-col gap-6 text-sm">
           <a href={imageURL} rel="noopener" target="_blank">
-            <img alt={`La ${hashtags.semifinal}`} className="" src={imageURL} />
+            <Image
+              alt={`La ${hashtags.semifinal}`}
+              blurDataURL="/blur.webp"
+              className="rounded-xl shadow-lg shadow-black drop-shadow-sm "
+              height={600}
+              placeholder="blur"
+              src={imageURL}
+              width={1200}
+              onLoadingComplete={(element) => {
+                element.scrollIntoView({behavior: "smooth"});
+              }}
+            />
           </a>
           <span className="block text-center">
             Pincha en la imagen para abrirla en una nueva ventana.

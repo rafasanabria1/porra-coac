@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import type {Database} from "@database";
 import type {CSSProperties} from "react";
+import type {AgrupacionEntity} from "@types";
 
 import {ImageResponse} from "next/og";
 
@@ -14,8 +15,7 @@ export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
   try {
     const {searchParams} = new URL(request.url);
-    const fase = (searchParams.get("fase") ??
-      "preliminares") as Database["public"]["Enums"]["fase"];
+    const fase = (searchParams.get("fase") ?? "preliminar") as Database["public"]["Enums"]["fase"];
     const username = searchParams.get("username") ?? "";
     const comparsasSelected = searchParams.has("comparsas")
       ? searchParams.get("comparsas")!.split(",")
@@ -79,127 +79,24 @@ async function buildImagePreliminares({
   cuartetosSelected: string[];
 }): Promise<ImageResponse> {
   const agrupaciones = await api.agrupaciones.preliminaresByOrder();
-  const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
-  const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
-  const coros = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro");
-  const cuartetos = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto");
 
-  return new ImageResponse(
-    (
-      <main
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "black",
-          color: "white",
-        }}
-      >
-        <div tw="flex flex-col">
-          <h1 tw="flex justify-center text-lg items-center m-0 p-0">
-            la
-            <strong tw="px-2 font-bold text-2xl">{hashtags.preliminar}</strong>
-            de
-            <strong tw="px-2 font-bold text-2xl">@{username}</strong>
-          </h1>
-          <div tw="flex text-sm relative">
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Comparsas</h2>
-              <ul tw="flex flex-col">
-                {comparsas.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        comparsasSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Chirigotas</h2>
-              <ul tw="flex flex-col">
-                {chirigotas.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        chirigotasSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Coros</h2>
-              <ul tw="flex flex-col">
-                {coros.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        corosSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Cuartetos</h2>
-              <ul tw="flex flex-col">
-                {cuartetos.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        cuartetosSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <div tw="absolute bottom-0 right-0 pb-8 pr-8 text-sm font-extrabold text-gray-300">
-              Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
-            </div>
-            <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
-              {hashtags.preliminar}
-            </div>
-          </div>
-        </div>
-        <div tw="absolute top-2 right-2 text-xs font-extrabold text-gray-700">
-          #PORRACOAC desarrollado por @rafasanabria1
-        </div>
-      </main>
-    ),
-    {
-      width: 1200,
-      height: 1200,
+  return buildImage({
+    fase: "preliminar",
+    username,
+    agrupacionesParticipants: {
+      comparsas: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa"),
+      chirigotas: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota"),
+      coros: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro"),
+      cuartetos: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto"),
     },
-  );
+    agrupacionesSelected: {
+      comparsas: comparsasSelected,
+      chirigotas: chirigotasSelected,
+      coros: corosSelected,
+      cuartetos: cuartetosSelected,
+    },
+    imageSize: {width: 1200, height: 1400},
+  });
 }
 
 async function buildImageCuartos({
@@ -216,127 +113,24 @@ async function buildImageCuartos({
   cuartetosSelected: string[];
 }): Promise<ImageResponse> {
   const agrupaciones = await api.agrupaciones.cuartosByOrder();
-  const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
-  const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
-  const coros = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro");
-  const cuartetos = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto");
 
-  return new ImageResponse(
-    (
-      <main
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "black",
-          color: "white",
-        }}
-      >
-        <div tw="flex flex-col">
-          <h1 tw="flex justify-center text-lg items-center m-0 p-0">
-            la
-            <strong tw="px-2 font-bold text-2xl">{hashtags.cuartos}</strong>
-            de
-            <strong tw="px-2 font-bold text-2xl">@{username}</strong>
-          </h1>
-          <div tw="flex text-sm relative">
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Comparsas</h2>
-              <ul tw="flex flex-col">
-                {comparsas.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        comparsasSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Chirigotas</h2>
-              <ul tw="flex flex-col">
-                {chirigotas.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        chirigotasSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Coros</h2>
-              <ul tw="flex flex-col">
-                {coros.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        corosSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Cuartetos</h2>
-              <ul tw="flex flex-col">
-                {cuartetos.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        cuartetosSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <div tw="absolute bottom-0 right-0 pb-8 pr-8 text-sm font-extrabold text-gray-300">
-              Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
-            </div>
-            <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
-              {hashtags.cuartos}
-            </div>
-          </div>
-        </div>
-        <div tw="absolute top-2 right-2 text-xs font-extrabold text-gray-700">
-          #PORRACOAC desarrollado por @rafasanabria1
-        </div>
-      </main>
-    ),
-    {
-      width: 1200,
-      height: 800,
+  return buildImage({
+    fase: "cuartos",
+    username,
+    agrupacionesParticipants: {
+      comparsas: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa"),
+      chirigotas: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota"),
+      coros: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro"),
+      cuartetos: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto"),
     },
-  );
+    agrupacionesSelected: {
+      comparsas: comparsasSelected,
+      chirigotas: chirigotasSelected,
+      coros: corosSelected,
+      cuartetos: cuartetosSelected,
+    },
+    imageSize: {width: 1200, height: 650},
+  });
 }
 
 async function buildImageSemifinales({
@@ -353,127 +147,24 @@ async function buildImageSemifinales({
   cuartetosSelected: string[];
 }): Promise<ImageResponse> {
   const agrupaciones = await api.agrupaciones.semifinalesByOrder();
-  const comparsas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa");
-  const chirigotas = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota");
-  const coros = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro");
-  const cuartetos = agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto");
 
-  return new ImageResponse(
-    (
-      <main
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "black",
-          color: "white",
-        }}
-      >
-        <div tw="flex flex-col gap-8">
-          <h1 tw="flex justify-center text-xl items-center m-0 p-0 mb-8">
-            la
-            <strong tw="px-2 font-bold text-4xl">{hashtags.semifinal}</strong>
-            de
-            <strong tw="px-2 font-bold text-4xl">@{username}</strong>
-          </h1>
-          <div tw="flex text-sm relative">
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Comparsas</h2>
-              <ul tw="flex flex-col">
-                {comparsas.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        comparsasSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Chirigotas</h2>
-              <ul tw="flex flex-col">
-                {chirigotas.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        chirigotasSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Coros</h2>
-              <ul tw="flex flex-col">
-                {coros.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        corosSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <section tw="w-1/4 flex flex-col px-8">
-              <h2 tw="text-3xl font-extrabold underline text-center">Cuartetos</h2>
-              <ul tw="flex flex-col">
-                {cuartetos.map((agrupacion) => {
-                  return (
-                    <li
-                      key={agrupacion.id}
-                      tw={`${
-                        cuartetosSelected.includes(agrupacion.id)
-                          ? "text-xl font-bold"
-                          : "line-through text-slate-700"
-                      }`}
-                    >
-                      {agrupacion.nombre}
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-            <div tw="absolute bottom-0 right-0 pb-8 pr-8 text-sm font-extrabold text-gray-300">
-              Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
-            </div>
-            <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
-              {hashtags.semifinal}
-            </div>
-          </div>
-        </div>
-        <div tw="absolute top-2 right-2 text-xs font-extrabold text-gray-700">
-          #PORRACOAC desarrollado por @rafasanabria1
-        </div>
-      </main>
-    ),
-    {
-      width: 1200,
-      height: 600,
+  return buildImage({
+    fase: "preliminar",
+    username,
+    agrupacionesParticipants: {
+      comparsas: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "comparsa"),
+      chirigotas: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "chirigota"),
+      coros: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "coro"),
+      cuartetos: agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto"),
     },
-  );
+    agrupacionesSelected: {
+      comparsas: comparsasSelected,
+      chirigotas: chirigotasSelected,
+      coros: corosSelected,
+      cuartetos: cuartetosSelected,
+    },
+    imageSize: {width: 1200, height: 400},
+  });
 }
 
 async function buildImageFinal({
@@ -494,6 +185,7 @@ async function buildImageFinal({
   const corosOrdered = await Promise.all(coros.map((id) => api.agrupaciones.get(id)));
   const cuartetosOrdered = await Promise.all(cuartetos.map((id) => api.agrupaciones.get(id)));
 
+  // TODO: Encontrar solución para nombres largos
   const largeNameIds = [
     "100f2713-1577-48b9-9dba-473614525f97",
     "75010401-b5c2-4039-97ca-2a71fa7a3f2b",
@@ -688,5 +380,151 @@ async function buildImageFinal({
       width: 1200,
       height: 1200,
     },
+  );
+}
+
+function buildImage({
+  fase,
+  username,
+  agrupacionesParticipants,
+  agrupacionesSelected,
+  imageSize,
+}: {
+  fase: Database["public"]["Enums"]["fase"];
+  username: string;
+  agrupacionesParticipants: {
+    comparsas: AgrupacionEntity[];
+    chirigotas: AgrupacionEntity[];
+    coros: AgrupacionEntity[];
+    cuartetos: AgrupacionEntity[];
+  };
+  agrupacionesSelected: {
+    comparsas: string[];
+    chirigotas: string[];
+    coros: string[];
+    cuartetos: string[];
+  };
+  imageSize: {width: number; height: number};
+}): ImageResponse {
+  const {comparsas, chirigotas, coros, cuartetos} = agrupacionesParticipants;
+  const {
+    comparsas: comparsasSelected,
+    chirigotas: chirigotasSelected,
+    coros: corosSelected,
+    cuartetos: cuartetosSelected,
+  } = agrupacionesSelected;
+
+  return new ImageResponse(
+    (
+      <main
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "black",
+          color: "white",
+        }}
+      >
+        <div tw="flex flex-col">
+          <h1 tw="flex justify-center text-lg items-center m-0 p-0">
+            la
+            <strong tw="px-2 font-bold text-2xl">{hashtags[fase]}</strong>
+            de
+            <strong tw="px-2 font-bold text-2xl">@{username}</strong>
+          </h1>
+          <div tw="flex text-sm relative">
+            <section tw="w-1/4 flex flex-col px-8">
+              <h2 tw="text-3xl font-extrabold underline text-center">Comparsas</h2>
+              <ul tw="flex flex-col">
+                {comparsas.map((agrupacion) => {
+                  return (
+                    <li
+                      key={agrupacion.id}
+                      tw={`${
+                        comparsasSelected.includes(agrupacion.id)
+                          ? "text-xl font-bold"
+                          : "line-through text-slate-700"
+                      }`}
+                    >
+                      {agrupacion.nombre}
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+            <section tw="w-1/4 flex flex-col px-8">
+              <h2 tw="text-3xl font-extrabold underline text-center">Chirigotas</h2>
+              <ul tw="flex flex-col">
+                {chirigotas.map((agrupacion) => {
+                  return (
+                    <li
+                      key={agrupacion.id}
+                      tw={`${
+                        chirigotasSelected.includes(agrupacion.id)
+                          ? "text-xl font-bold"
+                          : "line-through text-slate-700"
+                      }`}
+                    >
+                      {agrupacion.nombre}
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+            <section tw="w-1/4 flex flex-col px-8">
+              <h2 tw="text-3xl font-extrabold underline text-center">Coros</h2>
+              <ul tw="flex flex-col">
+                {coros.map((agrupacion) => {
+                  return (
+                    <li
+                      key={agrupacion.id}
+                      tw={`${
+                        corosSelected.includes(agrupacion.id)
+                          ? "text-xl font-bold"
+                          : "line-through text-slate-700"
+                      }`}
+                    >
+                      {agrupacion.nombre}
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+            <section tw="w-1/4 flex flex-col px-8">
+              <h2 tw="text-3xl font-extrabold underline text-center">Cuartetos</h2>
+              <ul tw="flex flex-col">
+                {cuartetos.map((agrupacion) => {
+                  return (
+                    <li
+                      key={agrupacion.id}
+                      tw={`${
+                        cuartetosSelected.includes(agrupacion.id)
+                          ? "text-xl font-bold"
+                          : "line-through text-slate-700"
+                      }`}
+                    >
+                      {agrupacion.nombre}
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+            <div tw="absolute bottom-0 right-0 pb-8 pr-8 text-sm font-extrabold text-gray-300">
+              Haz tu porra en https://porra-coac.vercel.app y comparte con el hashtag
+            </div>
+            <div tw="absolute bottom-0 right-0 pr-8 text-xl font-extrabold text-gray-300">
+              {hashtags[fase]}
+            </div>
+          </div>
+        </div>
+        <div tw="absolute top-2 right-2 text-xs font-extrabold text-gray-700">
+          #PORRACOAC desarrollado por @rafasanabria1
+        </div>
+      </main>
+    ),
+    imageSize,
   );
 }
