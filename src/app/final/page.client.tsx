@@ -6,7 +6,7 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
 import {useState} from "react";
 import Image from "next/image";
-import {PointerSensor, TouchSensor, useSensor, useSensors} from "@dnd-kit/core";
+import {MouseSensor, TouchSensor, useSensor, useSensors} from "@dnd-kit/core";
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -30,20 +30,20 @@ export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupa
   const [cuartetos, setCuartetos] = useState<AgrupacionEntity[]>(
     agrupaciones.filter((agrupacion) => agrupacion.modalidad === "cuarteto"),
   );
-  const sensors = useSensors(
-    useSensor(PointerSensor, {
-      activationConstraint: {
-        delay: 250,
-        tolerance: 5,
-      },
-    }),
-    useSensor(TouchSensor, {
-      activationConstraint: {
-        delay: 250,
-        tolerance: 5,
-      },
-    }),
-  );
+
+  const mouseSensor = useSensor(MouseSensor, {
+    activationConstraint: {
+      distance: 10,
+    },
+  });
+  const touchSensor = useSensor(TouchSensor, {
+    activationConstraint: {
+      delay: 50,
+      tolerance: 5,
+    },
+  });
+
+  const sensors = useSensors(mouseSensor, touchSensor);
 
   const [imageURL, setImageURL] = useState("");
 
@@ -167,6 +167,7 @@ export default function AgrupacionesClient({agrupaciones}: {agrupaciones: Agrupa
         <div className="my-8 flex flex-col gap-6 text-sm">
           <a href={imageURL} rel="noopener" target="_blank">
             <Image
+              priority
               alt={`La ${hashtags.final}`}
               blurDataURL="/blur.webp"
               className="rounded-xl shadow-lg shadow-black drop-shadow-sm "

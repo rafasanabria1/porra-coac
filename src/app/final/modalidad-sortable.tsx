@@ -60,13 +60,14 @@ export default function AgrupacionesfinalSortable({
       <HeadingH3 className="border-b border-slate-400/25 !text-left">{titulo}</HeadingH3>
       <DndContext
         collisionDetection={closestCenter}
+        id={`agrupaciones-final-sortable-${titulo}`}
         sensors={sensors}
         onDragCancel={handleDragCancel}
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
       >
         <SortableContext items={agrupaciones} strategy={rectSortingStrategy}>
-          <div className="mb-8 mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div className="mb-8 mt-4 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
             {agrupaciones.map((agrupacion, index) => (
               <AgrupacionSortableItem key={agrupacion.id} agrupacion={agrupacion} index={index} />
             ))}
