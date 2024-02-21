@@ -54,54 +54,46 @@ export default async function AcordeonModalidad({
                       <YoutubeIcon />
                       <h3 className="text-sm font-semibold">Actuaciones en el concurso</h3>
                     </header>
-                    <main className="flex flex-col gap-2 text-xs lg:flex-row">
+                    <main className="flex flex-col justify-center gap-2 text-xs lg:flex-row">
                       {agrupacion.actuaciones?.preliminares ? (
-                        <article>
-                          <a
-                            className="font-semibold underline"
-                            href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.preliminares}`}
-                            rel="noopener"
-                            target="_blank"
-                          >
-                            Preliminares
-                          </a>
-                        </article>
+                        <a
+                          className="font-semibold underline"
+                          href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.preliminares}`}
+                          rel="noopener"
+                          target="_blank"
+                        >
+                          Preliminares
+                        </a>
                       ) : null}
                       {agrupacion.actuaciones?.cuartos ? (
-                        <article>
-                          <a
-                            className="font-semibold underline"
-                            href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.cuartos}`}
-                            rel="noopener"
-                            target="_blank"
-                          >
-                            Cuartos de final
-                          </a>
-                        </article>
+                        <a
+                          className="font-semibold underline"
+                          href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.cuartos}`}
+                          rel="noopener"
+                          target="_blank"
+                        >
+                          Cuartos de final
+                        </a>
                       ) : null}
                       {agrupacion.actuaciones?.semifinales ? (
-                        <article>
-                          <a
-                            className="font-semibold underline"
-                            href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.semifinales}`}
-                            rel="noopener"
-                            target="_blank"
-                          >
-                            Semifinales
-                          </a>
-                        </article>
+                        <a
+                          className="font-semibold underline"
+                          href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.semifinales}`}
+                          rel="noopener"
+                          target="_blank"
+                        >
+                          Semifinales
+                        </a>
                       ) : null}
                       {agrupacion.actuaciones?.final ? (
-                        <article>
-                          <a
-                            className="font-semibold underline"
-                            href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.final}`}
-                            rel="noopener"
-                            target="_blank"
-                          >
-                            Final
-                          </a>
-                        </article>
+                        <a
+                          className="font-semibold underline"
+                          href={`https://www.youtube.com/watch?v=${agrupacion.actuaciones.final}`}
+                          rel="noopener"
+                          target="_blank"
+                        >
+                          Final
+                        </a>
                       ) : null}
                     </main>
                   </section>
